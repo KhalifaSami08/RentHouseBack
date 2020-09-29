@@ -29,7 +29,7 @@ namespace Backend_RentHouse_Khalifa_Sami
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            //établir une autorisation du CORS pour notre application
             services.AddCors(opt => 
             {
                  opt.AddPolicy(name: MyAllowSpecificOrigins,
