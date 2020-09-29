@@ -8,9 +8,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
     {
         [Key]
         public int idProperty { get; set; }
+        
+        public string description { get; set; }
         [Required]
         public byte nbRoom { get; set; }
-
         [Required]
         public ICollection<Room> roomsDetails { get; set;}
 
@@ -21,6 +22,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         // [Column("kitchenArea")]
         [Required]
         public int kitchenArea { get; set; }
+        public string imageLink { get; set; }
     
     }
 }

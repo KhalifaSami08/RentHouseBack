@@ -17,6 +17,8 @@ namespace Backend_RentHouse_Khalifa_Sami
 {
     public class Startup
     {
+
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,6 +29,16 @@ namespace Backend_RentHouse_Khalifa_Sami
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddCors(opt => 
+            {
+                 opt.AddPolicy(name: MyAllowSpecificOrigins,
+                              builder =>
+                              {
+                                  builder.WithOrigins("http://localhost:3000/");
+                              });
+            });
+
             services.AddControllers();
 
             // la chaine de co se trouve dans le fichier appsettings.json
@@ -50,6 +62,8 @@ namespace Backend_RentHouse_Khalifa_Sami
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseRouting();
 
