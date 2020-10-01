@@ -12,7 +12,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         public string description { get; set; }
         [Required]
         public byte nbRoom { get; set; }
-        [Required]
         public ICollection<Room> roomsDetails { get; set;}
 
         [Required]

@@ -20,7 +20,7 @@ namespace Backend_RentHouse_Khalifa_Sami
     public class Startup
     {
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        readonly string MyAllowSpecificOrigins = "Access-Control-Allow-Origin";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -37,7 +37,8 @@ namespace Backend_RentHouse_Khalifa_Sami
                  opt.AddPolicy(name: MyAllowSpecificOrigins,
                               builder =>
                               {
-                                  builder.WithOrigins("http://localhost:3000/");
+                                //   builder.WithOrigins("http://localhost:3000");
+                                  builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
                               });
             });
 
@@ -66,9 +67,10 @@ namespace Backend_RentHouse_Khalifa_Sami
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             app.UseCors(MyAllowSpecificOrigins);
 
-            app.UseRouting();
 
             app.UseAuthorization();
 
