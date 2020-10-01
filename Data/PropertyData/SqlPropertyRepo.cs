@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 
-namespace Backend_RentHouse_Khalifa_Sami.Data
+namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
 {
     public class SqlPropertyRepo : IPropertyRepo
     {
@@ -16,8 +16,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
 
         public void CreateProperty(Property property)
         {
-            if(property == null)
-                throw new ArgumentNullException(nameof(property));
+            // je veux gerer les erreurs dans le controller
+            // if(property == null)
+            //     throw new ArgumentNullException(nameof(property));
             
             _context.CommandProp.Add(property);
             SaveChanges();
@@ -27,8 +28,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
         {
             Property property = GetPropertyById(id);
             
-            if(property == null)
-                throw new Exception(nameof(property));
+            // je veux gerer les erreurs dans le controller
+            // if(property == null)
+            //     throw new Exception(nameof(property));
             
             _context.CommandProp.Remove(property);
             SaveChanges();
@@ -52,8 +54,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
 
         public void UpdateProperty(Property property)
         {
-            if(property==null)
-                throw new ArgumentNullException(nameof(property));
+            // je veux gerer les erreurs dans le controller
+            // if(property==null)
+            //     throw new ArgumentNullException(nameof(property));
 
             _context.CommandProp.Update(property);
             SaveChanges();

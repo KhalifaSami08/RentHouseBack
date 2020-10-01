@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model.Client
@@ -6,10 +7,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Client
     public class Client
     {
         [Key]
-        public int id { get; set; }
+        public int idClient { get; set; }
         [Required]
         public string civility { get; set; }
-        public char gender { get; set; } //Par défaut en fonction de civility
+        public string gender { get; set; } //Par défaut en fonction de civility
         [Required]
         public string name { get; set; }
         [Required]
@@ -22,12 +23,19 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Client
         public string city { get; set; }
         [Required]
         public string country { get; set; }
+
         [Required]
+        [EmailAddressAttribute]
         public string email { get; set; }
         [Required]
-        public string phoneNumer { get; set; }//string pour pas echaper le '0' si index local ainsi que pour l'indicatif
+        public string phoneNumber { get; set; }//string pour pas echaper le '0' si index local ainsi que pour l'indicatif
         
+        [Required]
+        public string type { get; set; } //Tenant or Guarantor, locataire ou garant
+        public DateTime dateOfBirth { get; set; }
+        public int age { get; set; } //par défaut en fonction de la DDN
+        public string placeOfBirth { get; set; }
+        public string nationalRegister { get; set; }    
+
     }
-
-
 }

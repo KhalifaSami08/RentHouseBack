@@ -19,10 +19,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         [Required]
         public DateTime end { get; set; }
         [Required]
-        public short duration { get; set; } //durée en mois
+        public byte duration { get; set; } //durée en mois
         [Required]
         public byte baseIndex { get; set; }
-        public float garanteeAmount { get; set; } //2X Loyer
+        public float garanteeAmount { get; set; } //2X Loyer - default
 
     }
 }
