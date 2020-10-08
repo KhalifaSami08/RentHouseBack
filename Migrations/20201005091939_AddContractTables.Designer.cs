@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201005091939_AddContractTables")]
+    partial class AddContractTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,42 +88,16 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.ToTable("CommandCli");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.History", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("begin")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("clientId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("contractId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("end")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isCurrentlyRented")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("propertyId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("CommandHistory");
-                });
-
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Contract", b =>
                 {
                     b.Property<int>("idContract")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("adress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("baseIndex")
                         .HasColumnType("tinyint");
@@ -138,11 +114,27 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<DateTime>("end")
                         .HasColumnType("datetime2");
 
+                    b.Property<float>("fixedChargesCost")
+                        .HasColumnType("real");
+
+                    b.Property<byte?>("floor")
+                        .HasColumnType("tinyint");
+
                     b.Property<float>("garanteeAmount")
                         .HasColumnType("real");
 
                     b.Property<int>("propertyId")
                         .HasColumnType("int");
+
+                    b.Property<float>("rentCost")
+                        .HasColumnType("real");
+
+                    b.Property<DateTime>("signatureDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("idContract");
 

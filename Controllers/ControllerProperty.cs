@@ -74,6 +74,17 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             return BadRequest();            
         }
 
+        [HttpPut("{id}")]
+        public ActionResult<Property> UpdateProperty(Property p)
+        {
+            
+            if(p==null)
+                return NotFound();
+
+            _repository.UpdateProperty(p);    
+            return Ok(p);            
+        }
+
         [HttpDelete("{id}")]
         public ActionResult<Property> DeleteProperty(int id)
         {

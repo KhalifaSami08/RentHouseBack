@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
+using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
+using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.Builder;
@@ -31,13 +34,14 @@ namespace Backend_RentHouse_Khalifa_Sami
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             //établir une autorisation du CORS pour notre application frontend
             services.AddCors(opt => 
             {
                  opt.AddPolicy(name: MyAllowSpecificOrigins,
                               builder =>
                               {
-                                //   builder.WithOrigins("http://localhost:3000");
                                   builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
                               });
             });
@@ -46,12 +50,14 @@ namespace Backend_RentHouse_Khalifa_Sami
 
             // la chaine de co se trouve dans le fichier appsettings.json
             services.AddDbContext<MyDbContext>(opt =>
-                opt.UseSqlServer(Configuration.GetConnectionString("PropertyConnection"))
+                opt.UseSqlServer(Configuration.GetConnectionString("myDataBaseConnection"))
             );
 
             // lier l'interface a la bdd
             services.AddScoped<IPropertyRepo,SqlPropertyRepo>();
             services.AddScoped<IClientRepo,SqlClientRepo>();
+            services.AddScoped<IContractRepo,SqlContractRepo>();
+            services.AddScoped<IHistoryRepo,SqlHistoryRepo>();
 
             //Json pour patch route
             services

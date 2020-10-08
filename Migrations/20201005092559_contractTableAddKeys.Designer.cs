@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201005092559_contractTableAddKeys")]
+    partial class contractTableAddKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,36 +86,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.HasKey("idClient");
 
                     b.ToTable("CommandCli");
-                });
-
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.History", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("begin")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("clientId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("contractId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("end")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isCurrentlyRented")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("propertyId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("CommandHistory");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Contract", b =>

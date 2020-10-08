@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Backend_RentHouse_Khalifa_Sami.Model.Property
 {
     //Bail
-    public class LeaseContract  :BasicInfoProperty
+    public class Contract
     {
         [Key]
         public int idContract { get; set; }

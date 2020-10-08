@@ -23,5 +23,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
 
         public DbSet<Property> CommandProp {get;set;}
         public DbSet<Client> CommandCli {get;set;}
+        public DbSet<Contract> CommandContr {get;set;}
+        public DbSet<History> CommandHistory {get;set;}
     }
 }

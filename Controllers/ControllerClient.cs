@@ -70,6 +70,19 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             return BadRequest();            
         }
 
+        // Exemple de requete patch 
+        /* 
+            [
+                
+                {
+                    "opt" : "replace",
+                    "path": "/phoneNumber",
+                    "value": "0477582533"
+                }
+
+            ]   
+        */
+
         [HttpPut("{id}")]
         public ActionResult<Client> UpdateClient(Client c)
         {
