@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+/* using System.Collections.Generic;
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Dtos;
@@ -21,20 +21,21 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         }
 
         [HttpGet]
-        public ActionResult<HistoryReaderDto> getAllHistories()
+        public ActionResult<IEnumerable<HistoryContract>> getAllHistories()
         {
-            return Ok(_mapper.Map<IEnumerable<HistoryReaderDto>>(_repository.getAllHistories()));
+            return Ok(_mapper.Map<IEnumerable<HistoryContract>>(_repository.getAllHistories()));
+            // return Ok(_repository.getAllHistories());
         }
-
-        public ActionResult<HistoryReaderDto> getHistoryById(int id)
+        [HttpGet("{id}")]
+        public ActionResult<HistoryContract> getHistoryById(int id)
         {
-            History his = _repository.getHistoryById(id);
+            HistoryContract his = _repository.getHistoryById(id);
             if(his == null)
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<HistoryReaderDto>(his));
+            return Ok(_mapper.Map<HistoryContract>(his));
         }
 
     }
-}
+} */

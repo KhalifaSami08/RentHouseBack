@@ -6,7 +6,7 @@ using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
-using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
+// using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.Builder;
@@ -57,7 +57,7 @@ namespace Backend_RentHouse_Khalifa_Sami
             services.AddScoped<IPropertyRepo,SqlPropertyRepo>();
             services.AddScoped<IClientRepo,SqlClientRepo>();
             services.AddScoped<IContractRepo,SqlContractRepo>();
-            services.AddScoped<IHistoryRepo,SqlHistoryRepo>();
+            // services.AddScoped<IHistoryRepo,SqlHistoryRepo>();
 
             //Json pour patch route
             services

@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201009095822_HandleHistoryDebug3")]
+    partial class HandleHistoryDebug3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,7 +85,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idClient");
 
-                    b.ToTable("CommandClient");
+                    b.ToTable("CommandCli");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
@@ -149,10 +151,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idContract");
 
-                    b.HasIndex("propertyId")
-                        .IsUnique();
-
-                    b.ToTable("CommandContract");
+                    b.ToTable("Contract");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
@@ -208,7 +207,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idProperty");
 
-                    b.ToTable("CommandProperty");
+                    b.ToTable("CommandProp");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>

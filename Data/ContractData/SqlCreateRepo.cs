@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
+using Backend_RentHouse_Khalifa_Sami.Model;
 
 namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
 {
@@ -16,26 +16,26 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
 
         public Contract CreateContract(Contract contract)
         {
-            _context.CommandContr.Add(contract);
+            _context.CommandContract.Add(contract);
             SaveChanges();
             return contract;
         }
 
         public IEnumerable<Contract> DeleteContract(int id)
         {
-            _context.CommandContr.Remove(GetContractById(id));
+            _context.CommandContract.Remove(GetContractById(id));
             SaveChanges();
             return GetAllContracts();
         }
 
         public IEnumerable<Contract> GetAllContracts()
         {
-            return _context.CommandContr.ToList();
+            return _context.CommandContract.ToList();
         }
 
         public Contract GetContractById(int id)
         {
-            return _context.CommandContr.FirstOrDefault(c => c.idContract == id);
+            return _context.CommandContract.FirstOrDefault(c => c.idContract == id);
         }
 
         public bool SaveChanges()
@@ -45,7 +45,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
 
         public Contract UpdateContract(Contract contract)
         {
-            _context.CommandContr.Update(contract);
+            _context.CommandContract.Update(contract);
             SaveChanges();
             return contract;
         }

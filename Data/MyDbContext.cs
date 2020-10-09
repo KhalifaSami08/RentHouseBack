@@ -18,12 +18,16 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
             modelBuilder.Entity<Property>()
                 .Property(p => p.signatureDate)
                 .HasDefaultValueSql("getdate()");
+
+            modelBuilder.Entity<Contract>()
+                .HasIndex(c => c.propertyId)
+                .IsUnique(true);
            
         }
 
-        public DbSet<Property> CommandProp {get;set;}
-        public DbSet<Client> CommandCli {get;set;}
-        public DbSet<Contract> CommandContr {get;set;}
-        public DbSet<History> CommandHistory {get;set;}
+        public DbSet<Property> CommandProperty {get;set;}
+        public DbSet<Client> CommandClient {get;set;}
+        public DbSet<Contract> CommandContract {get;set;}
+        // public DbSet<HistoryContract> CommandHistory {get;set;}
     }
 }

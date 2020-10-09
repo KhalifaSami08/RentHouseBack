@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201009112447_deleteHistory")]
+    partial class deleteHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -148,9 +150,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("idContract");
-
-                    b.HasIndex("propertyId")
-                        .IsUnique();
 
                     b.ToTable("CommandContract");
                 });

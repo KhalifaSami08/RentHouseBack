@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 
 namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
@@ -20,7 +21,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
             // if(property == null)
             //     throw new ArgumentNullException(nameof(property));
             
-            _context.CommandProp.Add(property);
+            _context.CommandProperty.Add(property);
             SaveChanges();
         }
 
@@ -32,18 +33,19 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
             // if(property == null)
             //     throw new Exception(nameof(property));
             
-            _context.CommandProp.Remove(property);
+            _context.CommandProperty.Remove(property);
             SaveChanges();
         }
 
         public IEnumerable<Property> GetAllProperties()
         {
-            return _context.CommandProp.ToList();
+            return _context.CommandProperty.ToList();
         }
 
         public Property GetPropertyById(int id)
         {
-            return _context.CommandProp.FirstOrDefault(p => p.idProperty == id);
+            Property p = _context.CommandProperty.FirstOrDefault(p => p.idProperty == id);
+            return p;
         }
 
 
@@ -58,7 +60,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
             // if(property==null)
             //     throw new ArgumentNullException(nameof(property));
 
-            _context.CommandProp.Update(property);
+            _context.CommandProperty.Update(property);
             SaveChanges();
             
         }

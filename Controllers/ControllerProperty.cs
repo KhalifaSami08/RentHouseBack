@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using AutoMapper;
+// using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
+using Backend_RentHouse_Khalifa_Sami.Dtos;
+using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -16,24 +19,28 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
         //repository = source de données
         private readonly IPropertyRepo _repository;
-        //mapper = liste de données a recuperer
+        private readonly IMapper _mapper;
+        // private readonly IHistoryRepo _historyRepo;
 
-        public ControllerProperty(IPropertyRepo repository)
+        public ControllerProperty(IPropertyRepo repository,IMapper mapper) //,IHistoryRepo historyRepo)
         {
             _repository = repository;
+            _mapper = mapper;
+            // _historyRepo = historyRepo;
         }
         
         [HttpGet]
-        public ActionResult <IEnumerable<Property>> GetAllProperties()
+        public ActionResult<IEnumerable<PropertyReaderDto>> GetAllProperties()
         {
-            IEnumerable<Property> commandItem = _repository.GetAllProperties();
-            return Ok(commandItem);
+            IEnumerable<PropertyReaderDto> propertyReaders = _mapper.Map<IEnumerable<PropertyReaderDto>>(_repository.GetAllProperties());
+            return Ok(propertyReaders);
         }
 
         [HttpGet("{id}", Name="GetPropertyById")]
-        public ActionResult<Property> GetPropertyById(int id)
+        public ActionResult<PropertyReaderDto> GetPropertyById(int id)
         {
-            Property p = _repository.GetPropertyById(id);
+            PropertyReaderDto p = _mapper.Map<PropertyReaderDto>(_repository.GetPropertyById(id));
+
             if(p == null)
                 return NotFound();
 
@@ -67,8 +74,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 if(!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-            _repository.UpdateProperty(p);    
-            return Ok(p);
+                _repository.UpdateProperty(p);    
+                return Ok(p);
             }
             
             return BadRequest();            

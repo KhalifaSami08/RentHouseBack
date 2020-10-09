@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201008190446_ContractAddProperties")]
+    partial class ContractAddProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,10 +85,40 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idClient");
 
-                    b.ToTable("CommandClient");
+                    b.ToTable("CommandCli");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.History", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("beginContract")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("clientId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("contractId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("endContract")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isCurrentlyRented")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("propertyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("CommandHistory");
+                });
+
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Contract", b =>
                 {
                     b.Property<int>("idContract")
                         .ValueGeneratedOnAdd()
@@ -149,10 +181,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idContract");
 
-                    b.HasIndex("propertyId")
-                        .IsUnique();
-
-                    b.ToTable("CommandContract");
+                    b.ToTable("CommandContr");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
@@ -182,9 +211,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<string>("imageLink")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isCurrentlyRented")
-                        .HasColumnType("bit");
-
                     b.Property<int>("kitchenArea")
                         .HasColumnType("int");
 
@@ -208,7 +234,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idProperty");
 
-                    b.ToTable("CommandProperty");
+                    b.ToTable("CommandProp");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>

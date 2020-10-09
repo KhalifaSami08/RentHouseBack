@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+/* using System.Collections.Generic;
 using System.Linq;
 using Backend_RentHouse_Khalifa_Sami.Model;
 
@@ -13,26 +13,23 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.HistoryData
             _context = context;
         }
 
-        public void createHistory(History h)
+        public void createHistory(HistoryContract h)
         {
             _context.Add(h);
-            saveChanges();
+            _context.SaveChanges();
         }
 
-        public IEnumerable<History> getAllHistories()
+        public IEnumerable<HistoryContract> getAllHistories()
         {
             return _context.CommandHistory.ToList();
         }
 
-        public History getHistoryById(int id)
+        public HistoryContract getHistoryById(int id)
         {
             return _context.CommandHistory.Find(id);
         }
 
-        public bool saveChanges()
-        {
-            return (_context.SaveChanges() >= 0);
-        }
+        
 
     }
-}
+} */

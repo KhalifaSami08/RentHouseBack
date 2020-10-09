@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
+using Backend_RentHouse_Khalifa_Sami.Model;
 
 namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
 {
