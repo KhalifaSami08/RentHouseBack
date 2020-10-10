@@ -10,7 +10,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
     {
         public MyDbContext(DbContextOptions<MyDbContext> opt) : base(opt)
         {
-
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

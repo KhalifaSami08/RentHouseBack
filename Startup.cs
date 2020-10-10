@@ -43,6 +43,8 @@ namespace Backend_RentHouse_Khalifa_Sami
                               builder =>
                               {
                                   builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
+                                  builder.WithOrigins("http://localhost:3000").AllowAnyOrigin();
+                                  builder.WithOrigins("http://localhost:3000").AllowAnyMethod();
                               });
             });
 

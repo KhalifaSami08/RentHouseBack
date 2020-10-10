@@ -55,6 +55,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 return NotFound();
 
             _repository.CreateContract(c);
+            
             Property p = _propertyRepo.GetPropertyById(c.propertyId);
                 p.isCurrentlyRented = true;
             _propertyRepo.UpdateProperty(p);

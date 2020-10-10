@@ -14,8 +14,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Dtos
         public byte? floor { get; set; }
         public float rentCost { get; set; }
         public float fixedChargesCost { get; set; }
-        public DateTime signatureDate { get; set; } //defaut
-
     
         public byte nbRoom { get; set; }
         public ICollection<Room> roomsDetails { get; set;}
