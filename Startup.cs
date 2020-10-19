@@ -6,7 +6,6 @@ using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
-// using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.Builder;
@@ -42,9 +41,9 @@ namespace Backend_RentHouse_Khalifa_Sami
                  opt.AddPolicy(name: MyAllowSpecificOrigins,
                               builder =>
                               {
-                                  builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
-                                  builder.WithOrigins("http://localhost:3000").AllowAnyOrigin();
-                                  builder.WithOrigins("http://localhost:3000").AllowAnyMethod();
+                                builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
+                                builder.WithOrigins("http://localhost:3000").AllowAnyOrigin();
+                                builder.WithOrigins("http://localhost:3000").AllowAnyMethod();
                               });
             });
 
@@ -78,7 +77,6 @@ namespace Backend_RentHouse_Khalifa_Sami
             app.UseRouting();
 
             app.UseCors(MyAllowSpecificOrigins);
-
 
             app.UseAuthorization();
 

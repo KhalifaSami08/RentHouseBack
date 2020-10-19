@@ -15,13 +15,18 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Property>()
+            modelBuilder.Entity<Contract>()
                 .Property(p => p.signatureDate)
                 .HasDefaultValueSql("getdate()");
 
             modelBuilder.Entity<Contract>()
-                .HasIndex(c => c.propertyId)
-                .IsUnique(true);
+                .Property(p => p.beginContract)
+                .HasDefaultValueSql("getdate()");
+
+            modelBuilder.Entity<Contract>()
+                .Property(p => p.entryDate)
+                .HasDefaultValueSql("getdate()");
+
            
         }
 

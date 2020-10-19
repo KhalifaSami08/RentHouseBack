@@ -23,9 +23,13 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
 
         public IEnumerable<Contract> DeleteContract(int id)
         {
-            _context.CommandContract.Remove(GetContractById(id));
-            SaveChanges();
-            return GetAllContracts();
+            if(GetContractById(id) != null){
+               _context.CommandContract.Remove(GetContractById(id));
+                SaveChanges();
+            }
+            
+            return GetAllContracts(); 
+            
         }
 
         public IEnumerable<Contract> GetAllContracts()
@@ -36,6 +40,14 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
         public Contract GetContractById(int id)
         {
             return _context.CommandContract.FirstOrDefault(c => c.idContract == id);
+        }
+        public Contract GetPropertyContractById(int id)
+        {
+            return _context.CommandContract.FirstOrDefault(c => c.propertyId == id);
+        }
+        public Contract GetClientContractById(int id)
+        {
+            return _context.CommandContract.FirstOrDefault(c => c.clientId == id);
         }
 
         public bool SaveChanges()

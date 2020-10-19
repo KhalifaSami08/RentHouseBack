@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
+using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
+using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Client;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +16,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
         //repository = source de données
         private readonly IClientRepo _repository;
-        //mapper = liste de données a recuperer
+        private readonly IContractRepo _contractRepo;
 
-        public ControllerClient(IClientRepo repository)
+        public ControllerClient(IClientRepo repository, IContractRepo contractRepo)
         {
             _repository = repository;
+            _contractRepo = contractRepo;
         }
         
         [HttpGet]
@@ -100,6 +103,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             Client c = _repository.GetClientById(id);
             if(c == null)
                 return NotFound();
+
+            Contract contract = _contractRepo.GetClientContractById(c.idClient);
+            _contractRepo.DeleteContract(contract.idContract);
 
             _repository.DeleteClient(id);    
             return Ok();

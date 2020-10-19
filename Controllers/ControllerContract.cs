@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using AutoMapper;
+using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
-// using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Dtos;
 using Backend_RentHouse_Khalifa_Sami.Model;
+using Backend_RentHouse_Khalifa_Sami.Model.Client;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -21,31 +22,57 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         private readonly IContractRepo _repository;
         private readonly IMapper _mapper;
         private readonly IPropertyRepo _propertyRepo;
+        private readonly IClientRepo _clientRepo;
 
         // private readonly IHistoryRepo _repoHistory;
 
-        public ControllerContract(IContractRepo repository,IMapper mapper, IPropertyRepo propertyRepo) // , IHistoryRepo repoHistory)
+        public ControllerContract(IContractRepo repository,IMapper mapper, IPropertyRepo propertyRepo, IClientRepo clientRep)
         {
             _repository = repository;
             _mapper = mapper;
             _propertyRepo = propertyRepo;
-            // _repoHistory = repoHistory;
+            _clientRepo = clientRep;
         }
         
         [HttpGet]
-        public ActionResult <IEnumerable<Contract>> GetAllContracts()
+        public ActionResult <IEnumerable<ContractDto>> GetAllContracts()
         {
-            return Ok(_repository.GetAllContracts());
+
+            IEnumerable<Contract> allContrats = _repository.GetAllContracts();
+            List<ContractDto> allContratsDto = new List<ContractDto>();
+
+            foreach(Contract c in allContrats)
+            {
+                Client cli = _clientRepo.GetClientById(c.clientId);
+                Property p = _propertyRepo.GetPropertyById(c.propertyId);
+
+                ContractDto contractDto = _mapper.Map<ContractDto>(c);
+                    contractDto.client = cli;
+                    contractDto.property = p;
+                
+                allContratsDto.Add(contractDto);
+            }
+
+            return Ok(allContratsDto);
         }
 
         [HttpGet("{id}", Name="GetContractById")]
-        public ActionResult<Contract> GetContractById(int id)
+        public ActionResult<ContractDto> GetContractById(int id)
         {
-            Contract c = _repository.GetContractById(id);
-            if(c == null)
+            Contract initContrat = _repository.GetContractById(id);
+            
+            if(initContrat == null)
                 return NotFound();
+            
+            
+            Client cli = _clientRepo.GetClientById(initContrat.clientId);
+            Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
 
-            return Ok(c);
+            ContractDto contractDto = _mapper.Map<ContractDto>(initContrat);
+                contractDto.client = cli;
+                contractDto.property = p;
+
+            return Ok(contractDto);
         }
 
         [HttpPost]
@@ -59,17 +86,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             Property p = _propertyRepo.GetPropertyById(c.propertyId);
                 p.isCurrentlyRented = true;
             _propertyRepo.UpdateProperty(p);
-           /*  HistoryCRDto crHis = new HistoryCRDto();
-                crHis.contractId = c.idContract;
-                crHis.clientId = c.clientId;
-                crHis.propertyId = c.propertyId;
-                crHis.beginContract = c.beginContract;
-                crHis.endContract = c.endContract;
-                crHis.baseIndex = c.baseIndex;
-                crHis.duration = c.duration;
-                crHis.garanteeAmount = c.garanteeAmount;
+           
+            Client cli = _clientRepo.GetClientById(c.clientId);
+                cli.haveAlreadyRentedHouse = true;
+            _clientRepo.UpdateClient(cli);
 
-            _repoHistory.createHistory(_mapper.Map<HistoryContract>(crHis)); */
             return Ok(c);
         }
         
@@ -117,6 +138,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             Property p = _propertyRepo.GetPropertyById(c.propertyId);
                 p.isCurrentlyRented = false;
             _propertyRepo.UpdateProperty(p);
+
+            Client cli = _clientRepo.GetClientById(c.clientId);
+                cli.haveAlreadyRentedHouse = false;
+            _clientRepo.UpdateClient(cli);
 
             _repository.DeleteContract(id);    
             return Ok();

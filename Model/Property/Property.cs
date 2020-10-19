@@ -16,14 +16,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         public string adress { get; set; }
         [Required]
         public string type { get; set; }
-        public byte? floor { get; set; }
+        public byte floor { get; set; }
+
         [Required]
         public float rentCost { get; set; }
         [Required]
         public float fixedChargesCost { get; set; }
-        public DateTime signatureDate { get; set; } //defaut
-
-        [Required]
         public byte nbRoom { get; set; }
         public ICollection<Room> roomsDetails { get; set;}
 
@@ -31,7 +29,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         public int diningRoomArea { get; set; }
         public int kitchenArea { get; set; }
         public string imageLink { get; set; }
-        public bool isCurrentlyRented { get; set ;}
+
+        public bool isCurrentlyRented { get; set ; }
+        
+        //Mobile uniquement
+        public int idProprio { get; set; }
     
     }
 }

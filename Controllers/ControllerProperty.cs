@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AutoMapper;
+using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
 // using Backend_RentHouse_Khalifa_Sami.Data.HistoryData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
 using Backend_RentHouse_Khalifa_Sami.Dtos;
@@ -19,27 +20,24 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
         //repository = source de données
         private readonly IPropertyRepo _repository;
-        private readonly IMapper _mapper;
-        // private readonly IHistoryRepo _historyRepo;
 
-        public ControllerProperty(IPropertyRepo repository,IMapper mapper) //,IHistoryRepo historyRepo)
+
+        public ControllerProperty(IPropertyRepo repository) 
         {
             _repository = repository;
-            _mapper = mapper;
-            // _historyRepo = historyRepo;
         }
         
         [HttpGet]
-        public ActionResult<IEnumerable<PropertyReaderDto>> GetAllProperties()
+        public ActionResult<IEnumerable<Property>> GetAllProperties()
         {
-            IEnumerable<PropertyReaderDto> propertyReaders = _mapper.Map<IEnumerable<PropertyReaderDto>>(_repository.GetAllProperties());
+            IEnumerable<Property> propertyReaders = _repository.GetAllProperties();
             return Ok(propertyReaders);
         }
 
         [HttpGet("{id}", Name="GetPropertyById")]
-        public ActionResult<PropertyReaderDto> GetPropertyById(int id)
+        public ActionResult<Property> GetPropertyById(int id)
         {
-            PropertyReaderDto p = _mapper.Map<PropertyReaderDto>(_repository.GetPropertyById(id));
+            Property p = _repository.GetPropertyById(id);
 
             if(p == null)
                 return NotFound();

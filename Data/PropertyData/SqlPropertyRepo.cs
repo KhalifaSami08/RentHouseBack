@@ -48,7 +48,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.PropertyData
             return p;
         }
 
-
         public bool SaveChanges()
         {
             return (_context.SaveChanges() >= 0);

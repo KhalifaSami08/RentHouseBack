@@ -16,13 +16,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
 
         [ForeignKey("Client")]
         public int clientId { get; set; }
-
-        public DateTime beginContract { get; set; }
+        public DateTime beginContract { get; set; } // date actuelle par défaut
         public DateTime endContract { get; set; }
-        public byte duration { get; set; } //durée en mois
+        public byte duration { get; set; } // durée en mois - par defaut géré dans le Front
         public byte baseIndex { get; set; }
-        public float garanteeAmount { get; set; } //2X Loyer - default
-
+        public float garanteeAmount { get; set; } // 2X Loyer - par defaut géré dans le Front
+        public DateTime signatureDate { get; set; } // date actuelle par défaut
 
         public float beginIndexWater { get; set; }
         public float beginIndexGaz { get; set; }
@@ -30,7 +29,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
         public bool isGuaranteePaid { get; set; }
         public DateTime garanteePaidDate { get; set; }
         public bool isFirstMountPaid { get; set; }
-        public DateTime entryDate { get; set; }
+        public DateTime entryDate { get; set; } // date actuelle par défaut
         public DateTime releaseDate { get; set; }
         public float endIndexWater { get; set; }
         public float endIndexGaz { get; set; }

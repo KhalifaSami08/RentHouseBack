@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201011120139_ClientUpdataGarantOrLocator")]
+    partial class ClientUpdataGarantOrLocator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,10 +57,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("haveAlreadyRentedHouse")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("isClient")
+                    b.Property<bool>("isGarant")
                         .HasColumnType("bit");
 
                     b.Property<string>("name")
@@ -99,9 +98,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("tinyint");
 
                     b.Property<DateTime>("beginContract")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("datetime2");
 
                     b.Property<float>("beginIndexElectricity")
                         .HasColumnType("real");
@@ -131,9 +128,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("real");
 
                     b.Property<DateTime>("entryDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("datetime2");
 
                     b.Property<float>("garanteeAmount")
                         .HasColumnType("real");
@@ -160,6 +155,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idContract");
 
+                    b.HasIndex("propertyId")
+                        .IsUnique();
+
                     b.ToTable("CommandContract");
                 });
 
@@ -184,11 +182,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<float>("fixedChargesCost")
                         .HasColumnType("real");
 
-                    b.Property<byte>("floor")
+                    b.Property<byte?>("floor")
                         .HasColumnType("tinyint");
-
-                    b.Property<int>("idProprio")
-                        .HasColumnType("int");
 
                     b.Property<string>("imageLink")
                         .HasColumnType("nvarchar(max)");
