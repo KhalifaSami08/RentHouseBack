@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20201005091939_AddContractTables")]
-    partial class AddContractTables
+    [Migration("20201019214204_resetMigration")]
+    partial class resetMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,6 +57,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("haveAlreadyRentedHouse")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isClient")
+                        .HasColumnType("bit");
+
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -79,31 +85,34 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("idClient");
 
-                    b.ToTable("CommandCli");
+                    b.ToTable("CommandClient");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Contract", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
                 {
                     b.Property<int>("idContract")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("adress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<byte>("baseIndex")
                         .HasColumnType("tinyint");
 
-                    b.Property<DateTime>("begin")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("beginContract")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<float>("beginIndexElectricity")
+                        .HasColumnType("real");
+
+                    b.Property<float>("beginIndexGaz")
+                        .HasColumnType("real");
+
+                    b.Property<float>("beginIndexWater")
+                        .HasColumnType("real");
 
                     b.Property<int>("clientId")
                         .HasColumnType("int");
@@ -111,34 +120,49 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<byte>("duration")
                         .HasColumnType("tinyint");
 
-                    b.Property<DateTime>("end")
+                    b.Property<DateTime>("endContract")
                         .HasColumnType("datetime2");
 
-                    b.Property<float>("fixedChargesCost")
+                    b.Property<float>("endIndexElectricity")
                         .HasColumnType("real");
 
-                    b.Property<byte?>("floor")
-                        .HasColumnType("tinyint");
+                    b.Property<float>("endIndexGaz")
+                        .HasColumnType("real");
+
+                    b.Property<float>("endIndexWater")
+                        .HasColumnType("real");
+
+                    b.Property<DateTime>("entryDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<float>("garanteeAmount")
                         .HasColumnType("real");
 
+                    b.Property<DateTime>("garanteePaidDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isFirstMountPaid")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isGuaranteePaid")
+                        .HasColumnType("bit");
+
                     b.Property<int>("propertyId")
                         .HasColumnType("int");
 
-                    b.Property<float>("rentCost")
-                        .HasColumnType("real");
-
-                    b.Property<DateTime>("signatureDate")
+                    b.Property<DateTime>("releaseDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("signatureDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.HasKey("idContract");
 
-                    b.ToTable("CommandContr");
+                    b.ToTable("CommandContract");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
@@ -153,6 +177,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("diningRoomArea")
@@ -161,11 +186,17 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<float>("fixedChargesCost")
                         .HasColumnType("real");
 
-                    b.Property<byte?>("floor")
+                    b.Property<byte>("floor")
                         .HasColumnType("tinyint");
+
+                    b.Property<int>("idProprio")
+                        .HasColumnType("int");
 
                     b.Property<string>("imageLink")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isCurrentlyRented")
+                        .HasColumnType("bit");
 
                     b.Property<int>("kitchenArea")
                         .HasColumnType("int");
@@ -176,11 +207,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<float>("rentCost")
                         .HasColumnType("real");
 
-                    b.Property<DateTime>("signatureDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
-
                     b.Property<int>("totalArea")
                         .HasColumnType("int");
 
@@ -190,7 +216,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idProperty");
 
-                    b.ToTable("CommandProp");
+                    b.ToTable("CommandProperty");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
