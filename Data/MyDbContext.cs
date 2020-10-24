@@ -33,6 +33,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
         public DbSet<Property> CommandProperty {get;set;}
         public DbSet<Client> CommandClient {get;set;}
         public DbSet<Contract> CommandContract {get;set;}
-        // public DbSet<HistoryContract> CommandHistory {get;set;}
+
     }
 }

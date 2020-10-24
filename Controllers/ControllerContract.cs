@@ -47,8 +47,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 Property p = _propertyRepo.GetPropertyById(c.propertyId);
 
                 ContractDto contractDto = _mapper.Map<ContractDto>(c);
-                    contractDto.client = cli;
-                    contractDto.property = p;
+                    /* contractDto.client = cli;
+                    contractDto.property = p; */
                 
                 allContratsDto.Add(contractDto);
             }
@@ -69,8 +69,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
 
             ContractDto contractDto = _mapper.Map<ContractDto>(initContrat);
-                contractDto.client = cli;
-                contractDto.property = p;
+               /*  contractDto.client = cli;
+                contractDto.property = p; */
 
             return Ok(contractDto);
         }
@@ -84,7 +84,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             _repository.CreateContract(c);
             
             Property p = _propertyRepo.GetPropertyById(c.propertyId);
-                p.isCurrentlyRented = true;
+                p.nbLocator += 1;
             _propertyRepo.UpdateProperty(p);
            
             Client cli = _clientRepo.GetClientById(c.clientId);
@@ -136,12 +136,18 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 return NotFound();
 
             Property p = _propertyRepo.GetPropertyById(c.propertyId);
-                p.isCurrentlyRented = false;
-            _propertyRepo.UpdateProperty(p);
+                if(p != null){
+                    p.nbLocator -=  1 ;
+                    _propertyRepo.UpdateProperty(p);
+                }
+               
 
             Client cli = _clientRepo.GetClientById(c.clientId);
-                cli.haveAlreadyRentedHouse = false;
-            _clientRepo.UpdateClient(cli);
+               if(cli != null){
+                    cli.haveAlreadyRentedHouse = false;
+                    _clientRepo.UpdateClient(cli);
+                }
+                
 
             _repository.DeleteContract(id);    
             return Ok();

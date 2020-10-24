@@ -193,10 +193,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<string>("imageLink")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isCurrentlyRented")
-                        .HasColumnType("bit");
-
                     b.Property<int>("kitchenArea")
+                        .HasColumnType("int");
+
+                    b.Property<int>("nbLocator")
                         .HasColumnType("int");
 
                     b.Property<byte>("nbRoom")

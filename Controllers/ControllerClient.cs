@@ -105,7 +105,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 return NotFound();
 
             Contract contract = _contractRepo.GetClientContractById(c.idClient);
-            _contractRepo.DeleteContract(contract.idContract);
+            
+            if(contract != null)
+                _contractRepo.DeleteContract(contract.idContract);
 
             _repository.DeleteClient(id);    
             return Ok();

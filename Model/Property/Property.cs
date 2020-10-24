@@ -30,7 +30,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         public int kitchenArea { get; set; }
         public string imageLink { get; set; }
 
-        public bool isCurrentlyRented { get; set ; }
+        public int nbLocator { get; set ; }
         
         //Mobile uniquement
         public int idProprio { get; set; }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
-    public partial class resetMigration : Migration
+    public partial class initialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -83,7 +83,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     diningRoomArea = table.Column<int>(nullable: false),
                     kitchenArea = table.Column<int>(nullable: false),
                     imageLink = table.Column<string>(nullable: true),
-                    isCurrentlyRented = table.Column<bool>(nullable: false),
+                    nbLocator = table.Column<int>(nullable: false),
                     idProprio = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

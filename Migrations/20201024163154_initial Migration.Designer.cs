@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20201019214204_resetMigration")]
-    partial class resetMigration
+    [Migration("20201024163154_initial Migration")]
+    partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -195,10 +195,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<string>("imageLink")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isCurrentlyRented")
-                        .HasColumnType("bit");
-
                     b.Property<int>("kitchenArea")
+                        .HasColumnType("int");
+
+                    b.Property<int>("nbLocator")
                         .HasColumnType("int");
 
                     b.Property<byte>("nbRoom")

@@ -26,11 +26,13 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
         public float beginIndexWater { get; set; }
         public float beginIndexGaz { get; set; }
         public float beginIndexElectricity { get; set; }
+
         public bool isGuaranteePaid { get; set; }
         public DateTime garanteePaidDate { get; set; }
         public bool isFirstMountPaid { get; set; }
         public DateTime entryDate { get; set; } // date actuelle par défaut
         public DateTime releaseDate { get; set; }
+        
         public float endIndexWater { get; set; }
         public float endIndexGaz { get; set; }
         public float endIndexElectricity { get; set; }
