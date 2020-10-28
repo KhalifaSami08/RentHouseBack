@@ -1,6 +1,6 @@
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
+using Backend_RentHouse_Khalifa_Sami.Model.Client;
 
 namespace Backend_RentHouse_Khalifa_Sami.Dtos
 {
@@ -11,6 +11,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Dtos
             //On Lie le model au DTO, source -> destination
             CreateMap<Contract,ContractDto>();//Lecture
             CreateMap<ContractDto,Contract>();//Ecriture
+
+            CreateMap<Client,ClientReaderWinformsDto>();
+            CreateMap<ClientReaderWinformsDto,Client>();
         }
     }
 }

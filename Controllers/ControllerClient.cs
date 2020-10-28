@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
+using Backend_RentHouse_Khalifa_Sami.Dtos;
 using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Client;
 using Microsoft.AspNetCore.JsonPatch;
@@ -17,11 +19,14 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         //repository = source de données
         private readonly IClientRepo _repository;
         private readonly IContractRepo _contractRepo;
+        private readonly IMapper _mapper;
 
-        public ControllerClient(IClientRepo repository, IContractRepo contractRepo)
+        public ControllerClient(IClientRepo repository, IContractRepo contractRepo, IMapper mapper)
         {
             _repository = repository;
             _contractRepo = contractRepo;
+            _mapper = mapper;
+
         }
         
         [HttpGet]
@@ -39,6 +44,13 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
             return Ok(c);
         }
+
+        /* [Route("winforms")]
+        [HttpGet]
+        public ActionResult <IEnumerable<ClientReaderWinformsDto>> GetAllClientsWinforms()
+        {
+            return Ok(_mapper.Map<IEnumerable<ClientReaderWinformsDto>>(_repository.GetAllClients()));
+        } */
 
         [HttpPost]
         public ActionResult<Client> CreateClient(Client c)

@@ -43,8 +43,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
             foreach(Contract c in allContrats)
             {
-                Client cli = _clientRepo.GetClientById(c.clientId);
-                Property p = _propertyRepo.GetPropertyById(c.propertyId);
+                // Client cli = _clientRepo.GetClientById(c.clientId);
+                // Property p = _propertyRepo.GetPropertyById(c.propertyId);
 
                 ContractDto contractDto = _mapper.Map<ContractDto>(c);
                     /* contractDto.client = cli;
@@ -65,8 +65,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
                 return NotFound();
             
             
-            Client cli = _clientRepo.GetClientById(initContrat.clientId);
-            Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
+            // Client cli = _clientRepo.GetClientById(initContrat.clientId);
+            // Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
 
             ContractDto contractDto = _mapper.Map<ContractDto>(initContrat);
                /*  contractDto.client = cli;

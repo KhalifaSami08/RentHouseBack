@@ -26,7 +26,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
             modelBuilder.Entity<Contract>()
                 .Property(p => p.entryDate)
                 .HasDefaultValueSql("getdate()");
-
            
         }
 
