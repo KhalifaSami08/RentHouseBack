@@ -41,10 +41,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
         {
             return _context.CommandContract.FirstOrDefault(c => c.idContract == id);
         }
-        public Contract GetPropertyContractById(int id)
-        {
-            return _context.CommandContract.FirstOrDefault(c => c.propertyId == id);
-        }
         public Contract GetClientContractById(int id)
         {
             return _context.CommandContract.FirstOrDefault(c => c.clientId == id);

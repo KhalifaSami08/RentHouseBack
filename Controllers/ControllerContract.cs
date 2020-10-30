@@ -90,6 +90,23 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             return Ok("Fichier bien téléchargé a l'adresse : "+doc.fileDestPath);
         }
         
+        [HttpGet("ContractByClientID/{id}")]
+        public ActionResult<int> GetIdContractbyIdClient(int id)
+        {
+            
+            Client cli = _clientRepo.GetClientById(id);
+            
+            if(cli == null)
+                return NotFound();
+
+            Contract contr = _repository.GetClientContractById(cli.idClient);
+
+            if (contr == null)
+                return NotFound();
+            
+            return Ok(contr.idContract);
+        }
+        
         [HttpPost]
         public ActionResult<Contract> CreateContract(Contract c)
         {

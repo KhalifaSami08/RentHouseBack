@@ -9,10 +9,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ContractData
         IEnumerable<Contract> GetAllContracts();
         Contract GetContractById(int id);
 
-        /* //Supprimer une propriété supprime aussi ses contrats. NE SERA PAS UTILISER
-        Contract GetPropertyContractById(int id);
-        */
-        //Supprimer un client supprime aussi ses contrats. NE SERA PAS UTILISER
+        
         Contract GetClientContractById(int id); 
 
         Contract CreateContract(Contract contract);
