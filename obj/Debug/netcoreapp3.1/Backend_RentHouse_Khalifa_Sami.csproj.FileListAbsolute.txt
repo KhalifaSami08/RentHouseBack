@@ -141,8 +141,6 @@ C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.AssemblyInfoInputs.cache
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.AssemblyInfo.cs
-C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache
-C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.RazorTargetAssemblyInfo.cache
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.csproj.CopyComplete
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\staticwebassets\Backend_RentHouse_Khalifa_Sami.StaticWebAssets.Manifest.cache
@@ -150,3 +148,6 @@ C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.dll
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.pdb
 C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.genruntimeconfig.cache
+C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\bin\Debug\netcoreapp3.1\Microsoft.Office.Interop.Word.dll
+C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache
+C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami\obj\Debug\netcoreapp3.1\Backend_RentHouse_Khalifa_Sami.MvcApplicationPartsAssemblyInfo.cache

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Backend_RentHouse_Khalifa_Sami.Model.Client;
+using Backend_RentHouse_Khalifa_Sami.Model;
 
 namespace Backend_RentHouse_Khalifa_Sami.Data.ClientData
 {

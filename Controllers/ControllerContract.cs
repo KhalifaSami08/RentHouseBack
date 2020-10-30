@@ -1,14 +1,22 @@
+using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Reflection.Metadata;
+using System.Text;
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
 using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
 using Backend_RentHouse_Khalifa_Sami.Dtos;
 using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Client;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Backend_RentHouse_Khalifa_Sami.Model.Documents;
+using Newtonsoft.Json;
+using Document = Backend_RentHouse_Khalifa_Sami.Model.Documents.Document;
+using Word = Microsoft.Office.Interop.Word;
+
 
 namespace Backend_RentHouse_Khalifa_Sami.Controllers
 {
@@ -43,13 +51,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
             foreach(Contract c in allContrats)
             {
-                // Client cli = _clientRepo.GetClientById(c.clientId);
-                // Property p = _propertyRepo.GetPropertyById(c.propertyId);
-
                 ContractDto contractDto = _mapper.Map<ContractDto>(c);
-                    /* contractDto.client = cli;
-                    contractDto.property = p; */
-                
                 allContratsDto.Add(contractDto);
             }
 
@@ -64,17 +66,30 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             if(initContrat == null)
                 return NotFound();
             
-            
-            // Client cli = _clientRepo.GetClientById(initContrat.clientId);
-            // Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
-
             ContractDto contractDto = _mapper.Map<ContractDto>(initContrat);
-               /*  contractDto.client = cli;
-                contractDto.property = p; */
-
             return Ok(contractDto);
         }
 
+        [HttpGet("doc/{id}/{type}")]
+        public ActionResult GetDocumentByIdType(int id,string type)
+        {
+            Contract initContrat = _repository.GetContractById(id);
+            
+            if(initContrat == null)
+                return null;
+            
+            Client cli = _clientRepo.GetClientById(initContrat.clientId);
+            Property p = _propertyRepo.GetPropertyById(initContrat.propertyId);
+            
+            TYPECONTRACT tp;
+            Enum.TryParse(type, out tp);
+            
+            Document doc = new Document(cli,tp);
+            doc.GenerateDocument(p, initContrat);
+            
+            return Ok("Fichier bien téléchargé a l'adresse : "+doc.fileDestPath);
+        }
+        
         [HttpPost]
         public ActionResult<Contract> CreateContract(Contract c)
         {
@@ -154,4 +169,5 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         }
       
     }
+    
 }

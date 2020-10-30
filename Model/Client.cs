@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Backend_RentHouse_Khalifa_Sami.Model.Client
+namespace Backend_RentHouse_Khalifa_Sami.Model
 {
     //Contient les données communes des Garants et des locataires 
     public class Client

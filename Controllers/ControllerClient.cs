@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
 using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
-using Backend_RentHouse_Khalifa_Sami.Dtos;
 using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Client;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 

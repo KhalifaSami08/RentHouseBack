@@ -1,6 +1,5 @@
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Client;
 
 namespace Backend_RentHouse_Khalifa_Sami.Dtos
 {

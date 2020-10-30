@@ -1,5 +1,5 @@
 using System;
-using Backend_RentHouse_Khalifa_Sami.Model.Client;
+using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Property;
 
 namespace Backend_RentHouse_Khalifa_Sami.Dtos
