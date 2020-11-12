@@ -20,7 +20,7 @@
     "Backend_RentHouse_Khalifa_Sami": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "contract",
+      "launchUrl": "api/contract",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

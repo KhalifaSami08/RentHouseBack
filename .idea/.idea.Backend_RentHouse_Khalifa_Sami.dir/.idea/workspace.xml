@@ -23,39 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ControllerContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerContract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Documents/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Documents/Document.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Property/Property.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Property/Property.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +60,8 @@
         <option value="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Model/Property/Property.cs" />
-        <option value="$PROJECT_DIR$/Model/Documents/Document.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
+        <option value="$PROJECT_DIR$/Model/Documents/Document.cs" />
         <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
       </list>
     </option>
@@ -174,7 +149,8 @@
       <workItem from="1605123458176" duration="301000" />
       <workItem from="1605125736915" duration="2890000" />
       <workItem from="1605140888347" duration="360000" />
-      <workItem from="1605141313073" duration="11684000" />
+      <workItem from="1605141313073" duration="12536000" />
+      <workItem from="1605186444943" duration="3492000" />
     </task>
     <servers />
   </component>
@@ -208,22 +184,22 @@
       <screen x="0" y="0" width="1603" height="862" />
     </state>
     <state x="255" y="85" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1603.862@0.0.1603.862" timestamp="1605183384102" />
-    <state width="1559" height="221" key="GridCell.Tab.0.bottom" timestamp="1605182866615">
+    <state width="1559" height="220" key="GridCell.Tab.0.bottom" timestamp="1605200168171">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1559" height="221" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
-    <state width="1559" height="221" key="GridCell.Tab.0.center" timestamp="1605182866615">
+    <state width="1559" height="220" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1605200168171" />
+    <state width="1559" height="220" key="GridCell.Tab.0.center" timestamp="1605200168170">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1559" height="221" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
-    <state width="1559" height="221" key="GridCell.Tab.0.left" timestamp="1605182866614">
+    <state width="1559" height="220" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1605200168170" />
+    <state width="1559" height="220" key="GridCell.Tab.0.left" timestamp="1605200168170">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1559" height="221" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1605182866614" />
-    <state width="1559" height="221" key="GridCell.Tab.0.right" timestamp="1605182866615">
+    <state width="1559" height="220" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1605200168170" />
+    <state width="1559" height="220" key="GridCell.Tab.0.right" timestamp="1605200168170">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1559" height="221" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
+    <state width="1559" height="220" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1605200168170" />
     <state x="45" y="32" width="1199" height="747" key="SettingsEditor" timestamp="1605141248677">
       <screen x="0" y="0" width="1603" height="862" />
     </state>

@@ -27,8 +27,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
             fileDestPath += fileName;
             filesTemplateLink += "TEMPLATE_"+type+".docx";
 
-            // Console.WriteLine(fileDestPath);
-            // Console.WriteLine(filesTemplateLink);
         }
 
         public String getFileName()
