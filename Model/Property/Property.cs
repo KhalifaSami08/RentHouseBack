@@ -34,6 +34,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Property
         
         //Mobile uniquement
         public int idProprio { get; set; }
+        public double longitude { get; set; }
+        public double latitude { get; set; }
+        
     
     }
 }

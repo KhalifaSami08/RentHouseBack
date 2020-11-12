@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201110202148_Coordinaries Property")]
+    partial class CoordinariesProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -196,11 +198,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<int>("kitchenArea")
                         .HasColumnType("int");
 
-                    b.Property<double>("latitude")
-                        .HasColumnType("float");
+                    b.Property<int>("lattitude")
+                        .HasColumnType("int");
 
-                    b.Property<double>("longitude")
-                        .HasColumnType("float");
+                    b.Property<int>("longitude")
+                        .HasColumnType("int");
 
                     b.Property<int>("nbLocator")
                         .HasColumnType("int");

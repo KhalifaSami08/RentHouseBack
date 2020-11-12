@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
 {
@@ -14,21 +15,28 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
         private TYPECONTRACT type;
 
         public string fileDestPath = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\DocumentsWord\\";
+        public string fileName;
         private string filesTemplateLink = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\DocumentsWord\\Templates\\";
 
         public Document(Client client, TYPECONTRACT type)
         {
             this.client = client;
             this.type = type;
-            
-            fileDestPath += client.name+"_"+client.surname+"_"+type+".docx";
+
+            fileName = client.name + "_" + client.surname + "_" + type + ".docx";
+            fileDestPath += fileName;
             filesTemplateLink += "TEMPLATE_"+type+".docx";
 
             // Console.WriteLine(fileDestPath);
             // Console.WriteLine(filesTemplateLink);
         }
 
-        public void GenerateDocument(Property.Property p,Contract c)
+        public String getFileName()
+        {
+            return fileName;
+        }
+
+        public String GenerateDocument(Property.Property p,Contract c)
         {
             wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -36,20 +44,20 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
 
             if (File.Exists(filesTemplateLink))
             {
-                object readOnly = true;
+                object readOnly = false;
                 myWordDoc = wordApp.Documents.Open(filesTemplateLink, ref missing, ref readOnly);
                 myWordDoc.Activate();
                 GetDocument(p,c);
-
             }
             else
             {
                 throw new Exception("TEMPLATE not Found!");
             }
-
+            
             myWordDoc.SaveAs2(fileDestPath);
             myWordDoc.Close();
             wordApp.Quit();
+            return fileDestPath;
         }
 
         private void GetDocument(Property.Property p,Contract c)

@@ -39,6 +39,10 @@
       <e p="Migrations" t="Include">
         <e p="20201024163154_initial Migration.cs" t="Include" />
         <e p="20201024163154_initial Migration.Designer.cs" t="Include" />
+        <e p="20201110202148_Coordinaries Property.cs" t="Include" />
+        <e p="20201110202148_Coordinaries Property.Designer.cs" t="Include" />
+        <e p="20201110203435_GeoLocalisation OK.cs" t="Include" />
+        <e p="20201110203435_GeoLocalisation OK.Designer.cs" t="Include" />
         <e p="MyDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Model" t="Include">

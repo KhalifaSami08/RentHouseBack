@@ -23,14 +23,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Backend_RentHouse_Khalifa_Sami/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ControllerContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerContract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ContractData/IContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ContractData/IContractRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Documents/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Documents/Document.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Property/Property.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Property/Property.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +66,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/328/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/4/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AB928E2C-86CC-4AA8-ADEC-92E013460682/5A/Document.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/335/StreamReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/32D/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/035422E9-68E0-4BA0-B7A9-7953F1E57E78/4B/StringContent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/321/Stream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/035422E9-68E0-4BA0-B7A9-7953F1E57E78/AB/MediaTypeHeaderValue.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -51,10 +81,13 @@
       <list>
         <option value="$PROJECT_DIR$/Model/Documents/TYPECONTRACT.cs" />
         <option value="$PROJECT_DIR$/Backend_RentHouse_Khalifa_Sami.csproj" />
-        <option value="$PROJECT_DIR$/Model/Documents/Document.cs" />
         <option value="$PROJECT_DIR$/Data/ContractData/IContractRepo.cs" />
         <option value="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Model/Property/Property.cs" />
+        <option value="$PROJECT_DIR$/Model/Documents/Document.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
+        <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
       </list>
     </option>
   </component>
@@ -77,7 +110,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Backend_RentHouse_Khalifa_Sami">
@@ -111,6 +144,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.Backend_RentHouse_Khalifa_Sami" />
+      <item itemvalue=".NET Launch Settings Profile.Backend_RentHouse_Khalifa_Sami: IIS Express" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,7 +160,21 @@
       <workItem from="1603925550368" duration="47000" />
       <workItem from="1604003493590" duration="7797000" />
       <workItem from="1604057529615" duration="2354000" />
-      <workItem from="1604074541079" duration="8574000" />
+      <workItem from="1604074541079" duration="9486000" />
+      <workItem from="1604088804068" duration="1410000" />
+      <workItem from="1604169083546" duration="169000" />
+      <workItem from="1604169608868" duration="86000" />
+      <workItem from="1604169759825" duration="1146000" />
+      <workItem from="1604951878618" duration="760000" />
+      <workItem from="1605000036301" duration="1317000" />
+      <workItem from="1605006598457" duration="28000" />
+      <workItem from="1605038790062" duration="1075000" />
+      <workItem from="1605040111765" duration="480000" />
+      <workItem from="1605110976626" duration="906000" />
+      <workItem from="1605123458176" duration="301000" />
+      <workItem from="1605125736915" duration="2890000" />
+      <workItem from="1605140888347" duration="360000" />
+      <workItem from="1605141313073" duration="11684000" />
     </task>
     <servers />
   </component>
@@ -149,25 +200,33 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1342" height="191" key="GridCell.Tab.0.bottom" timestamp="1604011449783">
+    <state x="606" y="229" key="#Web_Browsers" timestamp="1605182763047">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1342" height="191" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1604011449783" />
-    <state width="1342" height="191" key="GridCell.Tab.0.center" timestamp="1604011449782">
+    <state x="606" y="229" key="#Web_Browsers/0.0.1603.862@0.0.1603.862" timestamp="1605182763047" />
+    <state x="255" y="85" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605183384102">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1342" height="191" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1604011449782" />
-    <state width="1342" height="191" key="GridCell.Tab.0.left" timestamp="1604011449782">
+    <state x="255" y="85" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1603.862@0.0.1603.862" timestamp="1605183384102" />
+    <state width="1559" height="221" key="GridCell.Tab.0.bottom" timestamp="1605182866615">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1342" height="191" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1604011449782" />
-    <state width="1342" height="191" key="GridCell.Tab.0.right" timestamp="1604011449783">
+    <state width="1559" height="221" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
+    <state width="1559" height="221" key="GridCell.Tab.0.center" timestamp="1605182866615">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1342" height="191" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1604011449783" />
-    <state x="309" y="75" key="SettingsEditor" timestamp="1604008071663">
+    <state width="1559" height="221" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
+    <state width="1559" height="221" key="GridCell.Tab.0.left" timestamp="1605182866614">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state x="309" y="75" key="SettingsEditor/0.0.1603.862@0.0.1603.862" timestamp="1604008071663" />
+    <state width="1559" height="221" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1605182866614" />
+    <state width="1559" height="221" key="GridCell.Tab.0.right" timestamp="1605182866615">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state width="1559" height="221" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1605182866615" />
+    <state x="45" y="32" width="1199" height="747" key="SettingsEditor" timestamp="1605141248677">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="45" y="32" width="1199" height="747" key="SettingsEditor/0.0.1603.862@0.0.1603.862" timestamp="1605141248677" />
   </component>
 </project>
