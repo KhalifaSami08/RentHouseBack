@@ -13,20 +13,23 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
         
         private Client client;
         private TYPECONTRACT type;
-
-        public string fileDestPath = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\DocumentsWord\\";
+        
         public string fileName;
-        private string filesTemplateLink = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\DocumentsWord\\Templates\\";
 
+        // public string fileDestPath = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\DocumentsWord\\";
+        // public string filesTemplateLink = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\DocumentsWord\\Templates\\";
+        public string fileDestPath = Directory.GetCurrentDirectory()+"\\DocumentsWord\\";
+        private string filesTemplateLink = Directory.GetCurrentDirectory()+"\\DocumentsWord\\Templates\\";
+
+        
         public Document(Client client, TYPECONTRACT type)
         {
             this.client = client;
             this.type = type;
 
-            fileName = client.name + "_" + client.surname + "_" + type + ".docx";
+            fileName = client.name+"_"+client.surname+"_"+type+".docx";
             fileDestPath += fileName;
             filesTemplateLink += "TEMPLATE_"+type+".docx";
-
         }
 
         public String getFileName()

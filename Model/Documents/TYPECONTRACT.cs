@@ -8,6 +8,5 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
         LIEU_SORTIE,
         RESILIATION_ANTICIPE,
         CONGE_BAIL,
-
     }
 }

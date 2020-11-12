@@ -29,6 +29,18 @@
           <e p="SqlPropertyRepo.cs" t="Include" />
         </e>
       </e>
+      <e p="DocumentsWord" t="Include">
+        <e p="Templates" t="Include">
+          <e p="TEMPLATE_BAIL.docx" t="Include" />
+          <e p="TEMPLATE_CONGE_BAIL.docx" t="Include" />
+          <e p="TEMPLATE_GARANT.docx" t="Include" />
+          <e p="TEMPLATE_LIEU_ENTRE.docx" t="Include" />
+          <e p="TEMPLATE_LIEU_SORTIE.docx" t="Include" />
+          <e p="TEMPLATE_RESILIATION_ANTICIPE.docx" t="Include" />
+          <e p="Templates.7z" t="Include" />
+          <e p="~$MPLATE_CONGE_BAIL.docx" t="Include" />
+        </e>
+      </e>
       <e p="Dtos" t="Include">
         <e p="ClientReaderWinformsDto.cs" t="Include" />
         <e p="ContractDto.cs" t="Include" />

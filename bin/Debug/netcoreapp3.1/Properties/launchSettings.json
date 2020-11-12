@@ -11,7 +11,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "contract",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -19,9 +19,10 @@
     },
     "Backend_RentHouse_Khalifa_Sami": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
+      "commandLineArgs": "watch run",
       "launchUrl": "api/contract",
-      "applicationUrl": "http://localhost:5000",
+      "workingDirectory": "$(ProjectDir)",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
