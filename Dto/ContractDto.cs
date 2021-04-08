@@ -1,8 +1,6 @@
 using System;
-using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
 
-namespace Backend_RentHouse_Khalifa_Sami.Dtos
+namespace Backend_RentHouse_Khalifa_Sami.Dto
 {
     //Je change les ID propriétés et clients en objets
     public class ContractDto
@@ -12,13 +10,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Dtos
         public int propertyId { get; set; }
         public int clientId { get; set; }
 
-
         public DateTime beginContract { get; set; } // date actuelle par défaut
         public DateTime endContract { get; set; }
         public byte duration { get; set; } // durée en mois - par defaut géré dans le Front
         
         public byte baseIndex { get; set; }
-        public float garanteeAmount { get; set; } // 2X Loyer - par defaut géré dans le Front
+        public float guaranteedAmount { get; set; } // 2X Loyer - par defaut géré dans le Front
         public DateTime signatureDate { get; set; } // date actuelle par défaut
 
         public float beginIndexWater { get; set; }

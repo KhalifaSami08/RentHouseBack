@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Saaam\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Saaam\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Saaam\Desktop\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami" t="IncludeRecursive">
+    <e p="C:\Users\Saaam\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.01" t="ExcludeRecursive" />
+    <e p="C:\Users\Saaam\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Saaam\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Saaam\Documents\Vs Project\RentHouse_Project_Khalifa_Sami\Backend_RentHouse_Khalifa_Sami" t="IncludeRecursive">
       <e p=".gitattributes" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -14,7 +16,7 @@
         <e p="ControllerContract.cs" t="Include" />
         <e p="ControllerProperty.cs" t="Include" />
       </e>
-      <e p="Data" t="Include">
+      <e p="DAL" t="Include">
         <e p="ClientData" t="Include">
           <e p="IClientRepo.cs" t="Include" />
           <e p="SqlClientRepo.cs" t="Include" />
@@ -31,22 +33,17 @@
       </e>
       <e p="DocumentsWord" t="Include">
         <e p="Templates" t="Include">
-          <e p="TEMPLATE_BAIL.docx" t="Include" />
-          <e p="TEMPLATE_CONGE_BAIL.docx" t="Include" />
-          <e p="TEMPLATE_GARANT.docx" t="Include" />
-          <e p="TEMPLATE_LIEU_ENTRE.docx" t="Include" />
-          <e p="TEMPLATE_LIEU_SORTIE.docx" t="Include" />
-          <e p="TEMPLATE_RESILIATION_ANTICIPE.docx" t="Include" />
+          <e p="TEMPLATE_EarlyTermination.docx" t="Include" />
+          <e p="TEMPLATE_EntryState.docx" t="Include" />
+          <e p="TEMPLATE_ExitInventory.docx" t="Include" />
+          <e p="TEMPLATE_Guarantor.docx" t="Include" />
+          <e p="TEMPLATE_Lease.docx" t="Include" />
+          <e p="TEMPLATE_LeaseCancellation.docx" t="Include" />
           <e p="Templates.7z" t="Include" />
-          <e p="~$MPLATE_CONGE_BAIL.docx" t="Include" />
         </e>
       </e>
-      <e p="Dtos" t="Include">
-        <e p="ClientReaderWinformsDto.cs" t="Include" />
+      <e p="Dto" t="Include">
         <e p="ContractDto.cs" t="Include" />
-        <e p="Profile" t="Include">
-          <e p="Profiles.cs" t="Include" />
-        </e>
       </e>
       <e p="Migrations" t="Include">
         <e p="20201024163154_initial Migration.cs" t="Include" />
@@ -64,10 +61,7 @@
           <e p="Document.cs" t="Include" />
           <e p="TYPECONTRACT.cs" t="Include" />
         </e>
-        <e p="Property" t="Include">
-          <e p="Property.cs" t="Include" />
-          <e p="Room.cs" t="Include" />
-        </e>
+        <e p="Property.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">

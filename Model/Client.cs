@@ -3,24 +3,34 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model
 {
-    //Contient les données communes des Garants et des locataires 
+    //Contain common data between guarantor and tenant
     public class Client
     {
+        public Client(string postalCode, string city, string surname, string name, int idClient, string address)
+        {
+            this.postalCode = postalCode;
+            this.city = city;
+            this.surname = surname;
+            this.name = name;
+            this.idClient = idClient;
+            this.address = address;
+        }
+
         [Key]
-        public int idClient { get; set; }
+        public int idClient { get; }
         [Required]
         public string civility { get; set; }
         public string gender { get; set; } //Par défaut en fonction de civility
         [Required]
-        public string name { get; set; }
+        public string name { get; }
         [Required]
-        public string surname { get; set; }
+        public string surname { get; }
         [Required]
-        public string adress { get; set; }
+        public string address { get; }
         [Required]
-        public string postalCode { get; set; } //string car format international
+        public string postalCode { get; } //string car format international
         [Required]
-        public string city { get; set; }
+        public string city { get; }
         [Required]
         public string country { get; set; }
         [Required]
@@ -31,7 +41,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
         
 
         [Required]
-        public bool isClient { get; set; } //Client ou Garant
+        public bool isClient { get; set; } //Client ou Guarantor
         
         //Uniquement pour le client
 

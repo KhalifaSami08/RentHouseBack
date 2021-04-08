@@ -1,52 +1,47 @@
 using System;
 using System.IO;
-using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
-using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
 {
-    class Document
+    internal class Document
     {
+        private Application _wordApp;
         
-        private Word.Application wordApp;
-        
-        private Client client;
-        private TYPECONTRACT type;
-        
-        public string fileName;
+        private readonly Client _client;
+        private readonly TypeContract _type;
+        private readonly string _fileName;
 
-        // public string fileDestPath = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\DocumentsWord\\";
-        // public string filesTemplateLink = "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\DocumentsWord\\Templates\\";
-        public string fileDestPath = Directory.GetCurrentDirectory()+"\\DocumentsWord\\";
-        private string filesTemplateLink = Directory.GetCurrentDirectory()+"\\DocumentsWord\\Templates\\";
+        private readonly string _fileDestPath = Directory.GetCurrentDirectory()+"\\DocumentsWord\\";
+        private readonly string _filesTemplateLink = Directory.GetCurrentDirectory()+"\\DocumentsWord\\Templates\\";
 
         
-        public Document(Client client, TYPECONTRACT type)
+        public Document(Client client, TypeContract type)
         {
-            this.client = client;
-            this.type = type;
+            _client = client;
+            _type = type;
 
-            fileName = client.name+"_"+client.surname+"_"+type+".docx";
-            fileDestPath += fileName;
-            filesTemplateLink += "TEMPLATE_"+type+".docx";
+            _fileName = $"{client.name}_{client.surname}_{type}.docx";
+            _fileDestPath += _fileName;
+            _filesTemplateLink += $"TEMPLATE_{type}.docx";
         }
 
-        public String getFileName()
+        public string GetFileName()
         {
-            return fileName;
+            return _fileName;
         }
 
-        public String GenerateDocument(Property.Property p,Contract c)
+        public string GenerateDocument(Property p,Contract c)
         {
-            wordApp = new Word.Application();
+            _wordApp = new Application();
             object missing = Missing.Value;
-            Word.Document myWordDoc;
+            Microsoft.Office.Interop.Word.Document myWordDoc;
 
-            if (File.Exists(filesTemplateLink))
+            if (File.Exists(_filesTemplateLink))
             {
                 object readOnly = false;
-                myWordDoc = wordApp.Documents.Open(filesTemplateLink, ref missing, ref readOnly);
+                myWordDoc = _wordApp.Documents.Open(_filesTemplateLink, ref missing, ref readOnly);
                 myWordDoc.Activate();
                 GetDocument(p,c);
             }
@@ -55,105 +50,102 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
                 throw new Exception("TEMPLATE not Found!");
             }
             
-            myWordDoc.SaveAs2(fileDestPath);
+            myWordDoc.SaveAs2(_fileDestPath);
             myWordDoc.Close();
-            wordApp.Quit();
-            return fileDestPath;
+            _wordApp.Quit();
+            return _fileDestPath;
         }
 
-        private void GetDocument(Property.Property p,Contract c)
+        private void GetDocument(Property p,Contract c)
         {
-
             //find and replace
-            FindAndReplace(wordApp, "<client_name>", client.name);
-            FindAndReplace(wordApp, "<client_surname>", client.surname);
-            FindAndReplace(wordApp, "<client_adress>", client.adress);
-            FindAndReplace(wordApp, "<client_postalcode>", client.postalCode);
-            FindAndReplace(wordApp, "<client_city>", client.city);
-            FindAndReplace(wordApp, "<property_id>", p.idProperty);
-            FindAndReplace(wordApp, "<property_adress>", p.adress);
-            FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+            FindAndReplace(_wordApp, "<client_name>", _client.name);
+            FindAndReplace(_wordApp, "<client_surname>", _client.surname);
+            FindAndReplace(_wordApp, "<client_address>", _client.address);
+            FindAndReplace(_wordApp, "<client_postalcode>", _client.postalCode);
+            FindAndReplace(_wordApp, "<client_city>", _client.city);
+            FindAndReplace(_wordApp, "<property_id>", p.idProperty);
+            FindAndReplace(_wordApp, "<property_address>", p.address);
+            FindAndReplace(_wordApp, "<date>", DateTime.Now.ToShortDateString());
 
-            switch (type)
+            switch (_type)
             {
-                case TYPECONTRACT.BAIL:
-                    GetBail(p,c);
+                case TypeContract.Lease:
+                    GetLease(p,c);
                     break;
                 
-                case TYPECONTRACT.GARANT:
-                    GetGarant(c);
+                case TypeContract.Guarantor:
+                    GetGuarantor(c);
                     break;
 
-                case TYPECONTRACT.LIEU_ENTRE:
-                    GetLieuentre(c);
+                case TypeContract.EntryState:
+                    GetEntryState(c);
                     break;
 
-                case TYPECONTRACT.LIEU_SORTIE:
-                    GetLieusortie(c);
+                case TypeContract.ExitInventory:
+                    GetExitInventory(c);
                     break;
 
-                case TYPECONTRACT.RESILIATION_ANTICIPE:
-                    getRESIANTIP(c);
+                case TypeContract.EarlyTermination:
+                    GetEarlyTermination(c);
                     break;
 
-                case TYPECONTRACT.CONGE_BAIL:
-                    getCONGEBAIL(c);
+                case TypeContract.LeaseCancellation:
+                    GetLeaseCancellation(c);
                     break;
 
                 default:
-                    throw new Exception("Le type n'est pas valide ! ");
+                    throw new Exception("Type not valid ! ");
             }
-
         }
 
-        private void GetBail(Property.Property p, Contract c)
+        private void GetLease(Property p, Contract c)
         {
-            
-            FindAndReplace(wordApp, "<contrat_rentcost>", p.rentCost);
-            FindAndReplace(wordApp, "<contrat_fixedcharges>", p.fixedChargesCost);
-            FindAndReplace(wordApp, "<begin_contract>", c.beginContract);
-            FindAndReplace(wordApp, "<end_contract>", c.endContract);
-            FindAndReplace(wordApp, "<duration>", c.duration);
-            FindAndReplace(wordApp, "<signature_date>", c.signatureDate);
+            FindAndReplace(_wordApp, "<contract_rentCost>", p.rentCost);
+            FindAndReplace(_wordApp, "<contract_fixedCharges>", p.fixedChargesCost);
+            FindAndReplace(_wordApp, "<begin_contract>", c.beginContract);
+            FindAndReplace(_wordApp, "<end_contract>", c.endContract);
+            FindAndReplace(_wordApp, "<duration>", c.duration);
+            FindAndReplace(_wordApp, "<signature_date>", c.signatureDate);
         }
         
-        private void GetGarant(Contract c)
+        private void GetGuarantor(Contract c)
         {
-            FindAndReplace(wordApp, "<contract_garanteeAmount>", c.garanteeAmount);
-            FindAndReplace(wordApp, "<contract_isGaranteePaidDate>", c.isGuaranteePaid);
-            FindAndReplace(wordApp, "<contract_garanteePaidDate>", c.garanteePaidDate);
-            FindAndReplace(wordApp, "<contract_isFirstMountPaid>", c.isFirstMountPaid);
+            FindAndReplace(_wordApp, "<contract_guaranteeAmount>", c.guaranteeAmount);
+            FindAndReplace(_wordApp, "<contract_isGuaranteePaidDate>", c.isGuaranteePaid);
+            FindAndReplace(_wordApp, "<contract_guaranteePaidDate>", c.garanteePaidDate);
+            FindAndReplace(_wordApp, "<contract_isFirstMountPaid>", c.isFirstMountPaid);
         }
 
-        private void GetLieuentre(Contract c)
+        private void GetEntryState(Contract c)
         {
-            FindAndReplace(wordApp, "<contrat_eau>", c.beginIndexWater);
-            FindAndReplace(wordApp, "<contrat_electricite>", c.beginIndexElectricity);
-            FindAndReplace(wordApp, "<contrat_gaz>", c.beginIndexGaz);
-            FindAndReplace(wordApp, "<entry_date>", c.entryDate);
+            FindAndReplace(_wordApp, "<contract_eau>", c.beginIndexWater);
+            FindAndReplace(_wordApp, "<contract_electricity>", c.beginIndexElectricity);
+            FindAndReplace(_wordApp, "<contract_gaz>", c.beginIndexGaz);
+            FindAndReplace(_wordApp, "<entry_date>", c.entryDate);
         }
 
-        private void GetLieusortie(Contract c)
+        private void GetExitInventory(Contract c)
         {
-            FindAndReplace(wordApp, "<contrat_eau>", c.endIndexWater);
-            FindAndReplace(wordApp, "<contrat_electricite>", c.endIndexElectricity);
-            FindAndReplace(wordApp, "<contrat_gaz>", c.endIndexGaz);
-            FindAndReplace(wordApp, "<release_date>", c.releaseDate);
+            FindAndReplace(_wordApp, "<contract_eau>", c.endIndexWater);
+            FindAndReplace(_wordApp, "<contract_electricity>", c.endIndexElectricity);
+            FindAndReplace(_wordApp, "<contract_gaz>", c.endIndexGaz);
+            FindAndReplace(_wordApp, "<release_date>", c.releaseDate);
         }
 
-        private void getRESIANTIP(Contract c)
+        private void GetEarlyTermination(Contract c)
         {
-            FindAndReplace(wordApp, "<contract_endDate>", c.endContract);
+            FindAndReplace(_wordApp, "<contract_endDate>", c.endContract);
         }
 
-        private void getCONGEBAIL(Contract c)
+        private void GetLeaseCancellation(Contract c)
         {
-            FindAndReplace(wordApp, "<begin_contract>", c.beginContract);
-            FindAndReplace(wordApp, "<end_contract>", c.endContract);
+            FindAndReplace(_wordApp, "<begin_contract>", c.beginContract);
+            FindAndReplace(_wordApp, "<end_contract>", c.endContract);
         }
 
         //Find and Replace Method
-        private void FindAndReplace(Word.Application wordAppli, object toFindText, object replaceWithText)
+        private static void FindAndReplace(_Application wordApp, object toFindText, object replaceWithText)
         {
             object matchCase = true;
             object matchWholeWord = true;
@@ -164,11 +156,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
             object format = false;
             object wrap = 1;
             
-                wordAppli.Selection.Find.Execute(ref toFindText,
-                ref matchCase, ref matchWholeWord,
-                ref matchWildCards, ref matchSoundLike,
-                ref nmatchAllforms, ref forward,
-                ref wrap, ref format, ref replaceWithText);
+            wordApp.Selection.Find.Execute(ref toFindText,
+            ref matchCase, ref matchWholeWord,
+            ref matchWildCards, ref matchSoundLike,
+            ref nmatchAllforms, ref forward,
+            ref wrap, ref format, ref replaceWithText);
         }
 
     }

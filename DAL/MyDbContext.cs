@@ -1,17 +1,16 @@
-using System;
 using Backend_RentHouse_Khalifa_Sami.Model;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
 using Microsoft.EntityFrameworkCore;
 
-namespace Backend_RentHouse_Khalifa_Sami.Data
+namespace Backend_RentHouse_Khalifa_Sami.DAL
 {
     public class MyDbContext: DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> opt) : base(opt)
+        public MyDbContext(DbContextOptions<MyDbContext> opt, DbSet<Property> commandProperty, DbSet<Client> commandClient, DbSet<Contract> commandContract) : base(opt)
         {
-            
+            this.commandProperty = commandProperty;
+            this.commandClient = commandClient;
+            this.commandContract = commandContract;
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contract>()
@@ -25,12 +24,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Data
             modelBuilder.Entity<Contract>()
                 .Property(p => p.entryDate)
                 .HasDefaultValueSql("getdate()");
-           
         }
-
-        public DbSet<Property> CommandProperty {get;set;}
-        public DbSet<Client> CommandClient {get;set;}
-        public DbSet<Contract> CommandContract {get;set;}
+        public DbSet<Property> commandProperty {get;}
+        public DbSet<Client> commandClient {get;}
+        public DbSet<Contract> commandContract {get;}
 
     }
 }

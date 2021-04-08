@@ -1,67 +1,55 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
-using Backend_RentHouse_Khalifa_Sami.Data;
-using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
-using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
-using Backend_RentHouse_Khalifa_Sami.Data.PropertyData;
-using Backend_RentHouse_Khalifa_Sami.Model.Property;
+using Backend_RentHouse_Khalifa_Sami.DAL;
+using Backend_RentHouse_Khalifa_Sami.DAL.ClientData;
+using Backend_RentHouse_Khalifa_Sami.DAL.ContractData;
+using Backend_RentHouse_Khalifa_Sami.DAL.PropertyData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Backend_RentHouse_Khalifa_Sami
 {
     public class Startup
     {
-
-        readonly string MyAllowSpecificOrigins = "Access-Control-Allow-Origin";
+        readonly string _myAllowSpecificOrigins = "Access-Control-Allow-Origin";
+        private IConfiguration configuration { get; }
+        
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            //établir une autorisation du CORS pour notre application frontend
+            //establish CORS authorisation for frontend
             services.AddCors(opt => 
             {
-                 opt.AddPolicy(name: MyAllowSpecificOrigins,
-                              builder =>
-                              {
-                                builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
-                                builder.WithOrigins("http://localhost:19006").AllowAnyHeader();
-                                builder.WithOrigins("http://localhost:3000").AllowAnyOrigin();
-                                builder.WithOrigins("http://localhost:19006").AllowAnyOrigin();
-                                builder.WithOrigins("http://localhost:3000").AllowAnyMethod();
-                                builder.WithOrigins("http://localhost:19006").AllowAnyMethod();
-                              });
+                opt.AddPolicy(_myAllowSpecificOrigins,
+                    builder =>
+                    { 
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
+                    });
             });
 
             services.AddControllers();
 
-            // la chaine de co se trouve dans le fichier appsettings.json
+            // connection string is in appsettings.json
             services.AddDbContext<MyDbContext>(opt =>
-                opt.UseSqlServer(Configuration.GetConnectionString("myDataBaseConnection"))
+                opt.UseSqlServer(configuration.GetConnectionString("myDataBaseConnection"))
             );
 
-            // lier l'interface a la bdd
+            // link interface with DB
             services.AddScoped<IPropertyRepo,SqlPropertyRepo>();
             services.AddScoped<IClientRepo,SqlClientRepo>();
             services.AddScoped<IContractRepo,SqlContractRepo>();
-            // services.AddScoped<IHistoryRepo,SqlHistoryRepo>();
 
             //Json pour patch route
             services
@@ -78,11 +66,8 @@ namespace Backend_RentHouse_Khalifa_Sami
             }
 
             app.UseRouting();
-
-            app.UseCors(MyAllowSpecificOrigins);
-
+            app.UseCors(_myAllowSpecificOrigins);
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

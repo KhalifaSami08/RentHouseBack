@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using AutoMapper;
-using Backend_RentHouse_Khalifa_Sami.Data.ClientData;
-using Backend_RentHouse_Khalifa_Sami.Data.ContractData;
+using Backend_RentHouse_Khalifa_Sami.DAL.ClientData;
+using Backend_RentHouse_Khalifa_Sami.DAL.ContractData;
 using Backend_RentHouse_Khalifa_Sami.Model;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -13,18 +12,14 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
     [ApiController]
     public class ControllerClient : ControllerBase
     {
-
-        //repository = source de données
+        //repository = dataSource
         private readonly IClientRepo _repository;
         private readonly IContractRepo _contractRepo;
-        private readonly IMapper _mapper;
 
-        public ControllerClient(IClientRepo repository, IContractRepo contractRepo, IMapper mapper)
+        public ControllerClient(IClientRepo repository, IContractRepo contractRepo)
         {
             _repository = repository;
             _contractRepo = contractRepo;
-            _mapper = mapper;
-
         }
         
         [HttpGet]
@@ -32,7 +27,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         {
             return Ok(_repository.GetAllClients());
         }
-
+        
         [HttpGet("{id}", Name="GetClientById")]
         public ActionResult<Client> GetClientById(int id)
         {
@@ -42,14 +37,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
             return Ok(c);
         }
-
-        /* [Route("winforms")]
-        [HttpGet]
-        public ActionResult <IEnumerable<ClientReaderWinformsDto>> GetAllClientsWinforms()
-        {
-            return Ok(_mapper.Map<IEnumerable<ClientReaderWinformsDto>>(_repository.GetAllClients()));
-        } */
-
+        
         [HttpPost]
         public ActionResult<Client> CreateClient(Client c)
         {
@@ -60,29 +48,25 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             return Ok(c);
         }
         
-        // Le patch permet de changer un seul champ au lieu de changer toute la table
+        // patch allow to change one attribute instead of all object 
         [HttpPatch("{id}")]
         public ActionResult<Client> UpdateClient(int id, JsonPatchDocument<Client> patchDoc)
         {
-
             Client c = _repository.GetClientById(id);            
             if(c==null)
                 return NotFound();
-            
-            
-            if(patchDoc != null){
-                patchDoc.ApplyTo(c, ModelState);
 
-                if(!ModelState.IsValid)
-                    return BadRequest(ModelState);
+
+            if (patchDoc == null) return BadRequest();
+            
+            patchDoc.ApplyTo(c, ModelState);
+
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             _repository.UpdateClient(c);    
             return Ok(c);
-            }
-            
-            return BadRequest();            
         }
-
         // Exemple de requete patch 
         /* 
             [
@@ -99,7 +83,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         [HttpPut("{id}")]
         public ActionResult<Client> UpdateClient(Client c)
         {
-            
             if(c==null)
                 return NotFound();
 
@@ -122,6 +105,5 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             _repository.DeleteClient(id);    
             return Ok();
         }
-      
     }
 }

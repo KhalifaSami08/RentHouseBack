@@ -2,13 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Backend_RentHouse_Khalifa_Sami.Model;
 
-namespace Backend_RentHouse_Khalifa_Sami.Data.ClientData
+namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
 {
     public class SqlClientRepo : IClientRepo
     {
-
         private readonly MyDbContext _context;
-
         public SqlClientRepo(MyDbContext context)
         {
             _context = context;
@@ -16,7 +14,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ClientData
 
         public Client CreateClient(Client client)
         {
-            _context.CommandClient.Add(client);
+            _context.commandClient.Add(client);
             SaveChanges();
             return GetClientById(client.idClient);
         }
@@ -24,29 +22,29 @@ namespace Backend_RentHouse_Khalifa_Sami.Data.ClientData
         public IEnumerable<Client> DeleteClient(int id)
         {
             Client c = GetClientById(id);
-            _context.CommandClient.Remove(c);
+            _context.commandClient.Remove(c);
             SaveChanges();
             return GetAllClients();
         }
 
         public IEnumerable<Client> GetAllClients()
         {
-            return _context.CommandClient.ToList();
+            return _context.commandClient.ToList();
         }
 
         public Client GetClientById(int id)
         {
-            return _context.CommandClient.FirstOrDefault(c => c.idClient == id);
+            return _context.commandClient.FirstOrDefault(c => c.idClient == id);
         }
 
-        public bool SaveChanges()
+        private bool SaveChanges()
         {
-            return (_context.SaveChanges() >= 0);
+            return _context.SaveChanges() >= 0;
         }
 
         public Client UpdateClient(Client client)
         {
-            _context.CommandClient.Update(client);
+            _context.commandClient.Update(client);
             SaveChanges();
             return GetClientById(client.idClient);
         }

@@ -1,15 +1,16 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami.csproj",
+    "projectUniqueName": "C:\\Users\\Saaam\\Documents\\Vs Project\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami.csproj",
     "projectName": "Backend_RentHouse_Khalifa_Sami",
-    "projectPath": "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami.csproj",
-    "outputPath": "C:\\Users\\Saaam\\Desktop\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\obj\\",
+    "projectPath": "C:\\Users\\Saaam\\Documents\\Vs Project\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami.csproj",
+    "outputPath": "C:\\Users\\Saaam\\Documents\\Vs Project\\RentHouse_Project_Khalifa_Sami\\Backend_RentHouse_Khalifa_Sami\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -29,6 +30,10 @@
         "AutoMapper.Extensions.Microsoft.DependencyInjection": {
           "target": "Package",
           "version": "[8.0.1, )"
+        },
+        "Interop.Word": {
+          "target": "Package",
+          "version": "[1.0.0, )"
         },
         "Microsoft.AspNetCore.JsonPatch": {
           "target": "Package",
@@ -71,7 +76,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
     }
   }
 }
