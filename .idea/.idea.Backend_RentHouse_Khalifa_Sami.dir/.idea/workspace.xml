@@ -23,14 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dto/Profiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ControllerContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerContract.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +68,8 @@
         <option value="$PROJECT_DIR$/Dto/ClientReaderWinformDto.cs" />
         <option value="$PROJECT_DIR$/Dto/ClientReaderWinforms_Dto.cs" />
         <option value="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerClient.cs" />
-        <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerProperty.cs" />
         <option value="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" />
         <option value="$PROJECT_DIR$/Model/Documents/TYPECONTRACT.cs" />
@@ -94,6 +86,8 @@
         <option value="$PROJECT_DIR$/Migrations/20201024163154_initial Migration.Designer.cs" />
         <option value="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" />
         <option value="$PROJECT_DIR$/Dto/Profiles.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
       </list>
     </option>
   </component>
@@ -196,7 +190,7 @@
       <workItem from="1607686475219" duration="747000" />
       <workItem from="1608020417745" duration="593000" />
       <workItem from="1608675478096" duration="1406000" />
-      <workItem from="1617898616999" duration="8479000" />
+      <workItem from="1617898616999" duration="9367000" />
     </task>
     <servers />
   </component>

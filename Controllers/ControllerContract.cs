@@ -37,10 +37,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         [HttpGet]
         public ActionResult <IEnumerable<ContractDto>> GetAllContracts()
         {
-            IEnumerable<Contract> allContracts = _repository.GetAllContracts();
-            List<ContractDto> allContractsDto = allContracts.Select(c => _mapper.Map<ContractDto>(c)).ToList();
-
-            return Ok(allContractsDto);
+            return Ok(_mapper.Map<IEnumerable<ContractDto>>(_repository.GetAllContracts()));
         }
 
         [HttpGet("{id}", Name="GetContractById")]
