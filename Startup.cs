@@ -15,7 +15,7 @@ namespace Backend_RentHouse_Khalifa_Sami
 {
     public class Startup
     {
-        readonly string _myAllowSpecificOrigins = "Access-Control-Allow-Origin";
+        private const string MyAllowSpecificOrigins = "Access-Control-Allow-Origin";
         private IConfiguration configuration { get; }
         
         public Startup(IConfiguration configuration)
@@ -30,7 +30,7 @@ namespace Backend_RentHouse_Khalifa_Sami
             //establish CORS authorisation for frontend
             services.AddCors(opt => 
             {
-                opt.AddPolicy(_myAllowSpecificOrigins,
+                opt.AddPolicy(MyAllowSpecificOrigins,
                     builder =>
                     { 
                         builder.AllowAnyOrigin();
@@ -66,7 +66,7 @@ namespace Backend_RentHouse_Khalifa_Sami
             }
 
             app.UseRouting();
-            app.UseCors(_myAllowSpecificOrigins);
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

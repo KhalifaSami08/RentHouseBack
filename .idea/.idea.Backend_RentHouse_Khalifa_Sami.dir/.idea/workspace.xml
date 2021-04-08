@@ -23,20 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dto/Profiles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/MyDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MyDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/ContractDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/ContractDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201024163154_initial Migration.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201024163154_initial Migration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20210408205754_finalV1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20210408205754_finalV1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Contract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Contract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Property.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Property.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -100,6 +89,11 @@
         <option value="$PROJECT_DIR$/Model/Contract.cs" />
         <option value="$PROJECT_DIR$/Model/Property.cs" />
         <option value="$PROJECT_DIR$/Migrations/20210408205754_finalV1.cs" />
+        <option value="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" />
+        <option value="$PROJECT_DIR$/Migrations/20201110202148_Coordinaries Property.Designer.cs" />
+        <option value="$PROJECT_DIR$/Migrations/20201024163154_initial Migration.Designer.cs" />
+        <option value="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" />
+        <option value="$PROJECT_DIR$/Dto/Profiles.cs" />
       </list>
     </option>
   </component>
@@ -202,7 +196,7 @@
       <workItem from="1607686475219" duration="747000" />
       <workItem from="1608020417745" duration="593000" />
       <workItem from="1608675478096" duration="1406000" />
-      <workItem from="1617898616999" duration="7264000" />
+      <workItem from="1617898616999" duration="8479000" />
     </task>
     <servers />
   </component>
