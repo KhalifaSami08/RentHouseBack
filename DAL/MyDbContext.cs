@@ -5,12 +5,9 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL
 {
     public class MyDbContext: DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> opt, DbSet<Property> commandProperty, DbSet<Client> commandClient, DbSet<Contract> commandContract) : base(opt)
-        {
-            this.commandProperty = commandProperty;
-            this.commandClient = commandClient;
-            this.commandContract = commandContract;
-        }
+        public MyDbContext(DbContextOptions<MyDbContext> opt) : base(opt)
+        { }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contract>()
@@ -25,9 +22,9 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL
                 .Property(p => p.entryDate)
                 .HasDefaultValueSql("getdate()");
         }
-        public DbSet<Property> commandProperty {get;}
-        public DbSet<Client> commandClient {get;}
-        public DbSet<Contract> commandContract {get;}
+        public DbSet<Property> commandProperty {get; set;}
+        public DbSet<Client> commandClient {get; set;}
+        public DbSet<Contract> commandContract {get; set;}
 
     }
 }

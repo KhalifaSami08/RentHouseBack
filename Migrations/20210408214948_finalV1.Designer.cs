@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20201110202148_Coordinaries Property")]
-    partial class CoordinariesProperty
+    [Migration("20210408214948_finalV1")]
+    partial class finalV1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("adress")
+                    b.Property<string>("address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -87,7 +87,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idClient");
 
-                    b.ToTable("CommandClient");
+                    b.ToTable("commandClient");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
@@ -137,11 +137,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<float>("garanteeAmount")
-                        .HasColumnType("real");
-
                     b.Property<DateTime>("garanteePaidDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<float>("guaranteeAmount")
+                        .HasColumnType("real");
 
                     b.Property<bool>("isFirstMountPaid")
                         .HasColumnType("bit");
@@ -162,22 +162,21 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idContract");
 
-                    b.ToTable("CommandContract");
+                    b.ToTable("commandContract");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property", b =>
                 {
                     b.Property<int>("idProperty")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("adress")
+                    b.Property<string>("address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("diningRoomArea")
@@ -198,11 +197,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                     b.Property<int>("kitchenArea")
                         .HasColumnType("int");
 
-                    b.Property<int>("lattitude")
-                        .HasColumnType("int");
+                    b.Property<double>("latitude")
+                        .HasColumnType("float");
 
-                    b.Property<int>("longitude")
-                        .HasColumnType("int");
+                    b.Property<double>("longitude")
+                        .HasColumnType("float");
 
                     b.Property<int>("nbLocator")
                         .HasColumnType("int");
@@ -222,12 +221,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idProperty");
 
-                    b.ToTable("CommandProperty");
+                    b.ToTable("commandProperty");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property", b =>
                 {
-                    b.OwnsMany("Backend_RentHouse_Khalifa_Sami.Model.Property.Room", "roomsDetails", b1 =>
+                    b.OwnsMany("Backend_RentHouse_Khalifa_Sami.Model.Room", "roomsDetails", b1 =>
                         {
                             b1.Property<int>("idRoom")
                                 .ValueGeneratedOnAdd()

@@ -28,7 +28,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("address")
+                    b.Property<string>("adress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -137,7 +137,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<float>("guaranteedAmount")
+                    b.Property<float>("garanteeAmount")
                         .HasColumnType("real");
 
                     b.Property<DateTime>("garanteePaidDate")
@@ -172,7 +172,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("address")
+                    b.Property<string>("adress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

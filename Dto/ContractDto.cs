@@ -3,7 +3,7 @@ using System;
 namespace Backend_RentHouse_Khalifa_Sami.Dto
 {
     //Je change les ID propriétés et clients en objets
-    public class ContractDto
+    public abstract class ContractDto
     {
         public int idContract { get; set; }
 

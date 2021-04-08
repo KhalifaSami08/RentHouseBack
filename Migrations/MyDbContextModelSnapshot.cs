@@ -85,7 +85,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idClient");
 
-                    b.ToTable("CommandClient");
+                    b.ToTable("commandClient");
                 });
 
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
@@ -135,11 +135,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<float>("guaranteedAmount")
-                        .HasColumnType("real");
-
                     b.Property<DateTime>("garanteePaidDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<float>("guaranteeAmount")
+                        .HasColumnType("real");
 
                     b.Property<bool>("isFirstMountPaid")
                         .HasColumnType("bit");
@@ -160,10 +160,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idContract");
 
-                    b.ToTable("CommandContract");
+                    b.ToTable("commandContract");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property", b =>
                 {
                     b.Property<int>("idProperty")
                         .ValueGeneratedOnAdd()
@@ -175,7 +175,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("diningRoomArea")
@@ -220,12 +219,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("idProperty");
 
-                    b.ToTable("CommandProperty");
+                    b.ToTable("commandProperty");
                 });
 
-            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property.Property", b =>
+            modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Property", b =>
                 {
-                    b.OwnsMany("Backend_RentHouse_Khalifa_Sami.Model.Property.Room", "roomsDetails", b1 =>
+                    b.OwnsMany("Backend_RentHouse_Khalifa_Sami.Model.Room", "roomsDetails", b1 =>
                         {
                             b1.Property<int>("idRoom")
                                 .ValueGeneratedOnAdd()

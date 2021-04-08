@@ -6,27 +6,19 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
 {
     public class Property
     {
-        public Property(float fixedChargesCost, float rentCost, string address, int idProperty)
-        {
-            this.fixedChargesCost = fixedChargesCost;
-            this.rentCost = rentCost;
-            this.address = address;
-            this.idProperty = idProperty;
-        }
-
         [Key]
-        public int idProperty { get; }
+        public int idProperty { get; set; }
         public string description { get; set; }
         [Required]
-        public string address { get; }
+        public string address { get; set; }
         [Required]
         public string type { get; set; }
         public byte floor { get; set; }
 
         [Required]
-        public float rentCost { get; }
+        public float rentCost { get; set; }
         [Required]
-        public float fixedChargesCost { get; }
+        public float fixedChargesCost { get; set; }
         public byte nbRoom { get; set; }
         public ICollection<Room> roomsDetails { get; set;}
 
@@ -44,7 +36,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
     }
     
      [Owned] 
-     public abstract class Room
+     public class Room
     {
         [Key]
         public int idRoom { get; set; }

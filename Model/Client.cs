@@ -6,31 +6,21 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
     //Contain common data between guarantor and tenant
     public class Client
     {
-        public Client(string postalCode, string city, string surname, string name, int idClient, string address)
-        {
-            this.postalCode = postalCode;
-            this.city = city;
-            this.surname = surname;
-            this.name = name;
-            this.idClient = idClient;
-            this.address = address;
-        }
-
         [Key]
-        public int idClient { get; }
+        public int idClient { get; set; }
         [Required]
         public string civility { get; set; }
         public string gender { get; set; } //Par défaut en fonction de civility
         [Required]
-        public string name { get; }
+        public string name { get; set; }
         [Required]
-        public string surname { get; }
+        public string surname { get; set; }
         [Required]
-        public string address { get; }
+        public string address { get; set; }
         [Required]
-        public string postalCode { get; } //string car format international
+        public string postalCode { get; set; } //string car format international
         [Required]
-        public string city { get; }
+        public string city { get; set; }
         [Required]
         public string country { get; set; }
         [Required]
