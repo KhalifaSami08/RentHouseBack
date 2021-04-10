@@ -13,24 +13,24 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.PropertyData
         }
         public void CreateProperty(Property property)
         {
-            _context.commandProperty.Add(property);
+            _context.CommandProperty.Add(property);
             SaveChanges();
         }
         public void DeleteProperty(int id)
         {
             Property property = GetPropertyById(id);
-            _context.commandProperty.Remove(property);
+            _context.CommandProperty.Remove(property);
             SaveChanges();
         }
 
         public IEnumerable<Property> GetAllProperties()
         {
-            return _context.commandProperty.ToList();
+            return _context.CommandProperty.ToList();
         }
 
         public Property GetPropertyById(int id)
         {
-            Property p = _context.commandProperty.FirstOrDefault(p => p.idProperty == id);
+            Property p = _context.CommandProperty.FirstOrDefault(p => p.IdProperty == id);
             return p;
         }
 
@@ -41,7 +41,7 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.PropertyData
 
         public void UpdateProperty(Property property)
         {
-            _context.commandProperty.Update(property);
+            _context.CommandProperty.Update(property);
             SaveChanges();
         }
     }

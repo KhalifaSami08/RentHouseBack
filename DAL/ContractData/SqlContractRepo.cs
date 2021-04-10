@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Backend_RentHouse_Khalifa_Sami.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend_RentHouse_Khalifa_Sami.DAL.ContractData
 {
@@ -13,37 +14,43 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ContractData
         }
         public Contract CreateContract(Contract contract)
         {
-            _context.commandContract.Add(contract);
+            _context.CommandContract.Add(contract);
             SaveChanges();
             return contract;
         }
         public IEnumerable<Contract> DeleteContract(int id)
         {
             if (GetContractById(id) == null) return GetAllContracts();
-            _context.commandContract.Remove(GetContractById(id));
+            _context.CommandContract.Remove(GetContractById(id));
             SaveChanges();
             return GetAllContracts();
         }
         public IEnumerable<Contract> GetAllContracts()
         {
-            return _context.commandContract.ToList();
+            return _context.CommandContract
+                .Include(p => p.Client)
+                .Include(p => p.Property)
+                .ToList();
         }
 
         public Contract GetContractById(int id)
         {
-            return _context.commandContract.FirstOrDefault(c => c.idContract == id);
+            return _context.CommandContract
+                .Include(p => p.Client)
+                .Include(p => p.Property)
+                .FirstOrDefault(c => c.IdContract == id);
         }
         public Contract GetClientContractById(int id)
         {
-            return _context.commandContract.FirstOrDefault(c => c.clientId == id);
+            return _context.CommandContract.FirstOrDefault(c => c.ClientId == id);
         }
-        private bool SaveChanges()
+        private void SaveChanges()
         {
-            return _context.SaveChanges() >= 0;
+            _context.SaveChanges();
         }
         public Contract UpdateContract(Contract contract)
         {
-            _context.commandContract.Update(contract);
+            _context.CommandContract.Update(contract);
             SaveChanges();
             return contract;
         }

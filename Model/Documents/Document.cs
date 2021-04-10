@@ -22,7 +22,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
             _client = client;
             _type = type;
 
-            _fileName = $"{client.name}_{client.surname}_{type}.docx";
+            _fileName = $"{client.Name}_{client.Surname}_{type}.docx";
             _fileDestPath += _fileName;
             _filesTemplateLink += $"TEMPLATE_{type}.docx";
         }
@@ -59,13 +59,13 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
         private void GetDocument(Property p,Contract c)
         {
             //find and replace
-            FindAndReplace(_wordApp, "<client_name>", _client.name);
-            FindAndReplace(_wordApp, "<client_surname>", _client.surname);
-            FindAndReplace(_wordApp, "<client_address>", _client.address);
-            FindAndReplace(_wordApp, "<client_postalcode>", _client.postalCode);
-            FindAndReplace(_wordApp, "<client_city>", _client.city);
-            FindAndReplace(_wordApp, "<property_id>", p.idProperty);
-            FindAndReplace(_wordApp, "<property_address>", p.address);
+            FindAndReplace(_wordApp, "<client_name>", _client.Name);
+            FindAndReplace(_wordApp, "<client_surname>", _client.Surname);
+            FindAndReplace(_wordApp, "<client_address>", _client.Address);
+            FindAndReplace(_wordApp, "<client_postalcode>", _client.PostalCode);
+            FindAndReplace(_wordApp, "<client_city>", _client.City);
+            FindAndReplace(_wordApp, "<property_id>", p.IdProperty);
+            FindAndReplace(_wordApp, "<property_address>", p.Address);
             FindAndReplace(_wordApp, "<date>", DateTime.Now.ToShortDateString());
 
             switch (_type)
@@ -101,47 +101,47 @@ namespace Backend_RentHouse_Khalifa_Sami.Model.Documents
 
         private void GetLease(Property p, Contract c)
         {
-            FindAndReplace(_wordApp, "<contract_rentCost>", p.rentCost);
-            FindAndReplace(_wordApp, "<contract_fixedCharges>", p.fixedChargesCost);
-            FindAndReplace(_wordApp, "<begin_contract>", c.beginContract);
-            FindAndReplace(_wordApp, "<end_contract>", c.endContract);
-            FindAndReplace(_wordApp, "<duration>", c.duration);
-            FindAndReplace(_wordApp, "<signature_date>", c.signatureDate);
+            FindAndReplace(_wordApp, "<contract_rentCost>", p.RentCost);
+            FindAndReplace(_wordApp, "<contract_fixedCharges>", p.FixedChargesCost);
+            FindAndReplace(_wordApp, "<begin_contract>", c.BeginContract);
+            FindAndReplace(_wordApp, "<end_contract>", c.EndContract);
+            FindAndReplace(_wordApp, "<duration>", c.Duration);
+            FindAndReplace(_wordApp, "<signature_date>", c.SignatureDate);
         }
         
         private void GetGuarantor(Contract c)
         {
-            FindAndReplace(_wordApp, "<contract_guaranteeAmount>", c.guaranteeAmount);
-            FindAndReplace(_wordApp, "<contract_isGuaranteePaidDate>", c.isGuaranteePaid);
-            FindAndReplace(_wordApp, "<contract_guaranteePaidDate>", c.garanteePaidDate);
-            FindAndReplace(_wordApp, "<contract_isFirstMountPaid>", c.isFirstMountPaid);
+            FindAndReplace(_wordApp, "<contract_guaranteeAmount>", c.GuaranteeAmount);
+            FindAndReplace(_wordApp, "<contract_isGuaranteePaidDate>", c.IsGuaranteePaid);
+            FindAndReplace(_wordApp, "<contract_guaranteePaidDate>", c.GaranteePaidDate);
+            FindAndReplace(_wordApp, "<contract_isFirstMountPaid>", c.IsFirstMountPaid);
         }
 
         private void GetEntryState(Contract c)
         {
-            FindAndReplace(_wordApp, "<contract_eau>", c.beginIndexWater);
-            FindAndReplace(_wordApp, "<contract_electricity>", c.beginIndexElectricity);
-            FindAndReplace(_wordApp, "<contract_gaz>", c.beginIndexGaz);
-            FindAndReplace(_wordApp, "<entry_date>", c.entryDate);
+            FindAndReplace(_wordApp, "<contract_eau>", c.BeginIndexWater);
+            FindAndReplace(_wordApp, "<contract_electricity>", c.BeginIndexElectricity);
+            FindAndReplace(_wordApp, "<contract_gaz>", c.BeginIndexGaz);
+            FindAndReplace(_wordApp, "<entry_date>", c.EntryDate);
         }
 
         private void GetExitInventory(Contract c)
         {
-            FindAndReplace(_wordApp, "<contract_eau>", c.endIndexWater);
-            FindAndReplace(_wordApp, "<contract_electricity>", c.endIndexElectricity);
-            FindAndReplace(_wordApp, "<contract_gaz>", c.endIndexGaz);
-            FindAndReplace(_wordApp, "<release_date>", c.releaseDate);
+            FindAndReplace(_wordApp, "<contract_eau>", c.EndIndexWater);
+            FindAndReplace(_wordApp, "<contract_electricity>", c.EndIndexElectricity);
+            FindAndReplace(_wordApp, "<contract_gaz>", c.EndIndexGaz);
+            FindAndReplace(_wordApp, "<release_date>", c.ReleaseDate);
         }
 
         private void GetEarlyTermination(Contract c)
         {
-            FindAndReplace(_wordApp, "<contract_endDate>", c.endContract);
+            FindAndReplace(_wordApp, "<contract_endDate>", c.EndContract);
         }
 
         private void GetLeaseCancellation(Contract c)
         {
-            FindAndReplace(_wordApp, "<begin_contract>", c.beginContract);
-            FindAndReplace(_wordApp, "<end_contract>", c.endContract);
+            FindAndReplace(_wordApp, "<begin_contract>", c.BeginContract);
+            FindAndReplace(_wordApp, "<end_contract>", c.EndContract);
         }
 
         //Find and Replace Method

@@ -16,9 +16,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend_RentHouse_Khalifa_Sami.Controllers
 {
 
-    [Route("api/contract")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class ControllerContract : ControllerBase
+    public class ContractController : ControllerBase
     {
         //repository = dataSource
         private readonly IContractRepo _repository;
@@ -26,7 +26,7 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
         private readonly IPropertyRepo _propertyRepo;
         private readonly IClientRepo _clientRepo;
         
-        public ControllerContract(IContractRepo repository,IMapper mapper, IPropertyRepo propertyRepo, IClientRepo clientRep)
+        public ContractController(IContractRepo repository,IMapper mapper, IPropertyRepo propertyRepo, IClientRepo clientRep)
         {
             _repository = repository;
             _mapper = mapper;
@@ -60,8 +60,8 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             if(initContract == null)
                 return null;
             
-            Client cli = _clientRepo.GetClientById(initContract.clientId);
-            Property p = _propertyRepo.GetPropertyById(initContract.propertyId);
+            Client cli = _clientRepo.GetClientById(initContract.ClientId);
+            Property p = _propertyRepo.GetPropertyById(initContract.PropertyId);
 
             Enum.TryParse(type, out TypeContract tp);
             
@@ -85,12 +85,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             if(cli == null)
                 return NotFound();
 
-            Contract contr = _repository.GetClientContractById(cli.idClient);
+            Contract contr = _repository.GetClientContractById(cli.IdClient);
 
             if (contr == null)
                 return NotFound();
             
-            return Ok(contr.idContract);
+            return Ok(contr.IdContract);
         }
         
         [HttpPost]
@@ -101,12 +101,12 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
 
             _repository.CreateContract(c);
             
-            Property p = _propertyRepo.GetPropertyById(c.propertyId);
-                p.nbLocator += 1;
+            Property p = _propertyRepo.GetPropertyById(c.PropertyId);
+                p.NbLocator += 1;
             _propertyRepo.UpdateProperty(p);
            
-            Client cli = _clientRepo.GetClientById(c.clientId);
-                cli.haveAlreadyRentedHouse = true;
+            Client cli = _clientRepo.GetClientById(c.ClientId);
+                cli.HaveAlreadyRentedHouse = true;
             _clientRepo.UpdateClient(cli);
 
             return Ok(c);
@@ -148,16 +148,16 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             if(c == null)
                 return NotFound();
 
-            Property p = _propertyRepo.GetPropertyById(c.propertyId);
+            Property p = _propertyRepo.GetPropertyById(c.PropertyId);
                 if(p != null){
-                    p.nbLocator -=  1 ;
+                    p.NbLocator -=  1 ;
                     _propertyRepo.UpdateProperty(p);
                 }
 
-            Client cli = _clientRepo.GetClientById(c.clientId);
+            Client cli = _clientRepo.GetClientById(c.ClientId);
             
             if(cli != null){
-                cli.haveAlreadyRentedHouse = false;
+                cli.HaveAlreadyRentedHouse = false;
                 _clientRepo.UpdateClient(cli);
             }
             

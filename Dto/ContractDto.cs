@@ -1,36 +1,40 @@
 using System;
+using Backend_RentHouse_Khalifa_Sami.Model;
 
 namespace Backend_RentHouse_Khalifa_Sami.Dto
 {
     //Je change les ID propriétés et clients en objets
     public class ContractDto
     {
-        public int idContract { get; set; }
+        public int IdContract { get; set; }
 
-        public int propertyId { get; set; }
-        public int clientId { get; set; }
-
-        public DateTime beginContract { get; set; } // date actuelle par défaut
-        public DateTime endContract { get; set; }
-        public byte duration { get; set; } // durée en mois - par defaut géré dans le Front
+        public int PropertyId { get; set; }
+        public int ClientId { get; set; }
         
-        public byte baseIndex { get; set; }
-        public float guaranteedAmount { get; set; } // 2X Loyer - par defaut géré dans le Front
-        public DateTime signatureDate { get; set; } // date actuelle par défaut
+        public Property Property { get; set; }
+        public Client Client { get; set; }
 
-        public float beginIndexWater { get; set; }
-        public float beginIndexGaz { get; set; }
-        public float beginIndexElectricity { get; set; }
-
-        public bool isGuaranteePaid { get; set; }
-        public DateTime garanteePaidDate { get; set; }
-        public bool isFirstMountPaid { get; set; }
-        public DateTime entryDate { get; set; } // date actuelle par défaut
-        public DateTime releaseDate { get; set; }
+        public DateTime BeginContract { get; set; } // date actuelle par défaut
+        public DateTime EndContract { get; set; }
+        public byte Duration { get; set; } // durée en mois - par defaut géré dans le Front
         
-        public float endIndexWater { get; set; }
-        public float endIndexGaz { get; set; }
-        public float endIndexElectricity { get; set; }
+        public byte BaseIndex { get; set; }
+        public float GuaranteedAmount { get; set; } // 2X Loyer - par defaut géré dans le Front
+        public DateTime SignatureDate { get; set; } // date actuelle par défaut
+
+        public float BeginIndexWater { get; set; }
+        public float BeginIndexGaz { get; set; }
+        public float BeginIndexElectricity { get; set; }
+
+        public bool IsGuaranteePaid { get; set; }
+        public DateTime GaranteePaidDate { get; set; }
+        public bool IsFirstMountPaid { get; set; }
+        public DateTime EntryDate { get; set; } // date actuelle par défaut
+        public DateTime ReleaseDate { get; set; }
+        
+        public float EndIndexWater { get; set; }
+        public float EndIndexGaz { get; set; }
+        public float EndIndexElectricity { get; set; }
 
     }
 }

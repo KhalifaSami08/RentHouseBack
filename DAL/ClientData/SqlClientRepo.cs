@@ -14,27 +14,27 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
 
         public Client CreateClient(Client client)
         {
-            _context.commandClient.Add(client);
+            _context.CommandClient.Add(client);
             SaveChanges();
-            return GetClientById(client.idClient);
+            return GetClientById(client.IdClient);
         }
 
         public IEnumerable<Client> DeleteClient(int id)
         {
             Client c = GetClientById(id);
-            _context.commandClient.Remove(c);
+            _context.CommandClient.Remove(c);
             SaveChanges();
             return GetAllClients();
         }
 
         public IEnumerable<Client> GetAllClients()
         {
-            return _context.commandClient.ToList();
+            return _context.CommandClient.ToList();
         }
 
         public Client GetClientById(int id)
         {
-            return _context.commandClient.FirstOrDefault(c => c.idClient == id);
+            return _context.CommandClient.FirstOrDefault(c => c.IdClient == id);
         }
 
         private bool SaveChanges()
@@ -44,9 +44,9 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
 
         public Client UpdateClient(Client client)
         {
-            _context.commandClient.Update(client);
+            _context.CommandClient.Update(client);
             SaveChanges();
-            return GetClientById(client.idClient);
+            return GetClientById(client.IdClient);
         }
     }
 }

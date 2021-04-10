@@ -11,20 +11,28 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contract>()
-                .Property(p => p.signatureDate)
+                .Property(p => p.SignatureDate)
                 .HasDefaultValueSql("getdate()");
 
             modelBuilder.Entity<Contract>()
-                .Property(p => p.beginContract)
+                .Property(p => p.BeginContract)
                 .HasDefaultValueSql("getdate()");
 
             modelBuilder.Entity<Contract>()
-                .Property(p => p.entryDate)
+                .Property(p => p.EntryDate)
                 .HasDefaultValueSql("getdate()");
+
+            /*modelBuilder.Entity<Contract>()
+                .HasOne(p => p.Client)
+                .WithOne(p => p.Contract);
+            
+            modelBuilder.Entity<Contract>()
+                .HasOne(p => p.Property)
+                .WithOne(p => p.Contract);*/
         }
-        public DbSet<Property> commandProperty {get; set;}
-        public DbSet<Client> commandClient {get; set;}
-        public DbSet<Contract> commandContract {get; set;}
+        public DbSet<Property> CommandProperty {get; set;}
+        public DbSet<Client> CommandClient {get; set;}
+        public DbSet<Contract> CommandContract {get; set;}
 
     }
 }

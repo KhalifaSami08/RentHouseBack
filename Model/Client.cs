@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model
 {
@@ -7,41 +8,48 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
     public class Client
     {
         [Key]
-        public int idClient { get; set; }
+        public int IdClient { get; set; }
+        
+        /*
+         [ForeignKey("IdContract")]
+          public int IdContract { get; set; }
+          public Contract Contract { get; set; }
+        */
+        
         [Required]
-        public string civility { get; set; }
-        public string gender { get; set; } //Par défaut en fonction de civility
+        public string Civility { get; set; }
+        public string Gender { get; set; } //Par défaut en fonction de civility
         [Required]
-        public string name { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string surname { get; set; }
+        public string Surname { get; set; }
         [Required]
-        public string address { get; set; }
+        public string Address { get; set; }
         [Required]
-        public string postalCode { get; set; } //string car format international
+        public string PostalCode { get; set; } //string car format international
         [Required]
-        public string city { get; set; }
+        public string City { get; set; }
         [Required]
-        public string country { get; set; }
+        public string Country { get; set; }
         [Required]
         [EmailAddressAttribute]
-        public string email { get; set; }
+        public string Email { get; set; }
         [Required]
-        public string phoneNumber { get; set; }//string pour pas echaper le '0' si index local ainsi que pour l'indicatif
+        public string PhoneNumber { get; set; }//string pour pas echaper le '0' si index local ainsi que pour l'indicatif
         
 
         [Required]
-        public bool isClient { get; set; } //Client ou Guarantor
+        public bool IsClient { get; set; } //Client ou Guarantor
         
         //Uniquement pour le client
 
-        public DateTime dateOfBirth { get; set; }
-        public int age { get; set; } //par défaut en fonction de la DDN
-        public string placeOfBirth { get; set; }
-        public string nationalRegister { get; set; }    
+        public DateTime DateOfBirth { get; set; }
+        public int Age { get; set; } //par défaut en fonction de la DDN
+        public string PlaceOfBirth { get; set; }
+        public string NationalRegister { get; set; }    
 
         //Un client ne peux avoir qu'une seule location
-        public bool haveAlreadyRentedHouse { get; set; }
+        public bool HaveAlreadyRentedHouse { get; set; }
 
     }
 }

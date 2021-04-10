@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc; // using Backend_RentHouse_Khalifa_Sami.Data.His
 
 namespace Backend_RentHouse_Khalifa_Sami.Controllers
 {
-    [Route("api/property")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class ControllerProperty : ControllerBase
+    public class PropertyController : ControllerBase
     {
         //repository = dataSource
         private readonly IPropertyRepo _repository;
-        public ControllerProperty(IPropertyRepo repository) 
+        public PropertyController(IPropertyRepo repository) 
         {
             _repository = repository;
         }

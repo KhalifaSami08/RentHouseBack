@@ -8,15 +8,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend_RentHouse_Khalifa_Sami.Controllers
 {
 
-    [Route("api/client")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class ControllerClient : ControllerBase
+    public class ClientController : ControllerBase
     {
         //repository = dataSource
         private readonly IClientRepo _repository;
         private readonly IContractRepo _contractRepo;
 
-        public ControllerClient(IClientRepo repository, IContractRepo contractRepo)
+        public ClientController(IClientRepo repository, IContractRepo contractRepo)
         {
             _repository = repository;
             _contractRepo = contractRepo;
@@ -97,10 +97,10 @@ namespace Backend_RentHouse_Khalifa_Sami.Controllers
             if(c == null)
                 return NotFound();
 
-            Contract contract = _contractRepo.GetClientContractById(c.idClient);
+            Contract contract = _contractRepo.GetClientContractById(c.IdClient);
             
             if(contract != null)
-                _contractRepo.DeleteContract(contract.idContract);
+                _contractRepo.DeleteContract(contract.IdContract);
 
             _repository.DeleteClient(id);    
             return Ok();

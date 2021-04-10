@@ -4,14 +4,16 @@ using Backend_RentHouse_Khalifa_Sami.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend_RentHouse_Khalifa_Sami.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210410124458_ConfigureGraph2")]
+    partial class ConfigureGraph2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,6 +59,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.Property<bool>("HaveAlreadyRentedHouse")
                         .HasColumnType("bit");
+
+                    b.Property<int>("IdContract")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsClient")
                         .HasColumnType("bit");
@@ -160,9 +165,11 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.HasKey("IdContract");
 
-                    b.HasIndex("ClientId");
+                    b.HasIndex("ClientId")
+                        .IsUnique();
 
-                    b.HasIndex("PropertyId");
+                    b.HasIndex("PropertyId")
+                        .IsUnique();
 
                     b.ToTable("CommandContract");
                 });
@@ -189,6 +196,9 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
 
                     b.Property<byte>("Floor")
                         .HasColumnType("tinyint");
+
+                    b.Property<int>("IdContract")
+                        .HasColumnType("int");
 
                     b.Property<int>("IdProprio")
                         .HasColumnType("int");
@@ -229,14 +239,14 @@ namespace Backend_RentHouse_Khalifa_Sami.Migrations
             modelBuilder.Entity("Backend_RentHouse_Khalifa_Sami.Model.Contract", b =>
                 {
                     b.HasOne("Backend_RentHouse_Khalifa_Sami.Model.Client", "Client")
-                        .WithMany()
-                        .HasForeignKey("ClientId")
+                        .WithOne("Contract")
+                        .HasForeignKey("Backend_RentHouse_Khalifa_Sami.Model.Contract", "ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Backend_RentHouse_Khalifa_Sami.Model.Property", "Property")
-                        .WithMany()
-                        .HasForeignKey("PropertyId")
+                        .WithOne("Contract")
+                        .HasForeignKey("Backend_RentHouse_Khalifa_Sami.Model.Contract", "PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

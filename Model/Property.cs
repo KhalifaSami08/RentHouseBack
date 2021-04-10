@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model
@@ -7,42 +8,49 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
     public class Property
     {
         [Key]
-        public int idProperty { get; set; }
-        public string description { get; set; }
+        public int IdProperty { get; set; }
+        
+        /*
+         [ForeignKey("IdContract")]
+         public int IdContract { get; set; }
+         public Contract Contract { get; set; }
+         */
+
+        public string Description { get; set; }
         [Required]
-        public string address { get; set; }
+        public string Address { get; set; }
         [Required]
-        public string type { get; set; }
-        public byte floor { get; set; }
+        public string Type { get; set; }
+        public byte Floor { get; set; }
 
         [Required]
-        public float rentCost { get; set; }
+        public float RentCost { get; set; }
         [Required]
-        public float fixedChargesCost { get; set; }
-        public byte nbRoom { get; set; }
-        public ICollection<Room> roomsDetails { get; set;}
+        public float FixedChargesCost { get; set; }
+        public byte NbRoom { get; set; }
+        public ICollection<Room> RoomsDetails { get; set;}
 
-        public int totalArea { get; set; } //superficie totale en m2
-        public int diningRoomArea { get; set; }
-        public int kitchenArea { get; set; }
-        public string imageLink { get; set; }
+        public int TotalArea { get; set; } //superficie totale en m2
+        public int DiningRoomArea { get; set; }
+        public int KitchenArea { get; set; }
+        public string ImageLink { get; set; }
 
-        public int nbLocator { get; set ; }
+        public int NbLocator { get; set ; }
         
         //Mobile uniquement
-        public int idProprio { get; set; }
-        public double longitude { get; set; }
-        public double latitude { get; set; }
+        public int IdProprio { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
     }
     
      [Owned] 
      public class Room
     {
         [Key]
-        public int idRoom { get; set; }
+        public int IdRoom { get; set; }
         [Required]
-        string nameRoom { get; set; }
+        string NameRoom { get; set; }
         [Required]
-        int area { get; set; }
+        int Area { get; set; }
     }
 }
