@@ -12,18 +12,15 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ContractData
         {
             _context = context;
         }
-        public Contract CreateContract(Contract contract)
+        public void CreateContract(Contract contract)
         {
             _context.CommandContract.Add(contract);
             SaveChanges();
-            return contract;
         }
-        public IEnumerable<Contract> DeleteContract(int id)
+        public void DeleteContract(int id)
         {
-            if (GetContractById(id) == null) return GetAllContracts();
             _context.CommandContract.Remove(GetContractById(id));
             SaveChanges();
-            return GetAllContracts();
         }
         public IEnumerable<Contract> GetAllContracts()
         {
@@ -48,11 +45,10 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ContractData
         {
             _context.SaveChanges();
         }
-        public Contract UpdateContract(Contract contract)
+        public void UpdateContract(Contract contract)
         {
             _context.CommandContract.Update(contract);
             SaveChanges();
-            return contract;
         }
     }
 }

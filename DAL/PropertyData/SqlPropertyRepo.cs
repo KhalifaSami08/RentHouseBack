@@ -34,9 +34,9 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.PropertyData
             return p;
         }
 
-        private bool SaveChanges()
+        private void SaveChanges()
         {
-            return _context.SaveChanges() >= 0;
+            _context.SaveChanges();
         }
 
         public void UpdateProperty(Property property)

@@ -8,8 +8,8 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ContractData
         IEnumerable<Contract> GetAllContracts();
         Contract GetContractById(int id);
         Contract GetClientContractById(int id);
-        Contract CreateContract(Contract contract);
-        Contract UpdateContract(Contract contract);
-        IEnumerable<Contract> DeleteContract(int id);
+        void CreateContract(Contract contract);
+        void UpdateContract(Contract contract);
+        void DeleteContract(int id);
     }
 }

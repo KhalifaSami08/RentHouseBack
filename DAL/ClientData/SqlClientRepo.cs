@@ -12,19 +12,17 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
             _context = context;
         }
 
-        public Client CreateClient(Client client)
+        public void CreateClient(Client client)
         {
             _context.CommandClient.Add(client);
             SaveChanges();
-            return GetClientById(client.IdClient);
         }
 
-        public IEnumerable<Client> DeleteClient(int id)
+        public void DeleteClient(int id)
         {
             Client c = GetClientById(id);
             _context.CommandClient.Remove(c);
             SaveChanges();
-            return GetAllClients();
         }
 
         public IEnumerable<Client> GetAllClients()
@@ -37,16 +35,15 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
             return _context.CommandClient.FirstOrDefault(c => c.IdClient == id);
         }
 
-        private bool SaveChanges()
-        {
-            return _context.SaveChanges() >= 0;
+        private void SaveChanges()
+        { 
+            _context.SaveChanges();
         }
 
-        public Client UpdateClient(Client client)
+        public void UpdateClient(Client client)
         {
             _context.CommandClient.Update(client);
             SaveChanges();
-            return GetClientById(client.IdClient);
         }
     }
 }

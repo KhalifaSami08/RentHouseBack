@@ -7,8 +7,8 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL.ClientData
     {
         IEnumerable<Client> GetAllClients();
         Client GetClientById(int id);
-        Client CreateClient(Client client);
-        Client UpdateClient(Client client);
-        IEnumerable<Client> DeleteClient(int id);
+        void CreateClient(Client client);
+        void UpdateClient(Client client);
+        void DeleteClient(int id);
     }
 }

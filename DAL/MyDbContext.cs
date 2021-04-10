@@ -21,14 +21,6 @@ namespace Backend_RentHouse_Khalifa_Sami.DAL
             modelBuilder.Entity<Contract>()
                 .Property(p => p.EntryDate)
                 .HasDefaultValueSql("getdate()");
-
-            /*modelBuilder.Entity<Contract>()
-                .HasOne(p => p.Client)
-                .WithOne(p => p.Contract);
-            
-            modelBuilder.Entity<Contract>()
-                .HasOne(p => p.Property)
-                .WithOne(p => p.Contract);*/
         }
         public DbSet<Property> CommandProperty {get; set;}
         public DbSet<Client> CommandClient {get; set;}

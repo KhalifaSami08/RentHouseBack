@@ -23,27 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GraphQL/Queries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Migrations/20210410122535_ConfigureGraph.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Migrations/20210410122535_ConfigureGraph.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ControllerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ControllerContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerContract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ControllerProperty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerProperty.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/MyDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MyDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/ContractDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/ContractDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Contract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Contract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Documents/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Documents/Document.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Property.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Property.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
     </list>
@@ -78,9 +67,7 @@
         <option value="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" />
         <option value="$PROJECT_DIR$/Model/Property/Property.cs" />
         <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" />
         <option value="$PROJECT_DIR$/DAL/PropertyData/IPropertyRepo.cs" />
-        <option value="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" />
         <option value="$PROJECT_DIR$/Dtos/Profile/Profiles.cs" />
         <option value="$PROJECT_DIR$/Model/Room.cs" />
         <option value="$PROJECT_DIR$/Dtos/ContractDto.cs" />
@@ -88,7 +75,6 @@
         <option value="$PROJECT_DIR$/Dtos/ClientReaderWinformDto.cs" />
         <option value="$PROJECT_DIR$/Dto/ClientReaderWinformDto.cs" />
         <option value="$PROJECT_DIR$/Dto/ClientReaderWinforms_Dto.cs" />
-        <option value="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Model/Documents/TYPECONTRACT.cs" />
         <option value="$PROJECT_DIR$/Model/Documents/TypeContract.cs" />
@@ -101,16 +87,19 @@
         <option value="$PROJECT_DIR$/Dto/Profiles.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/GraphQL/Queries.cs" />
-        <option value="$PROJECT_DIR$/Model/Contract.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerClient.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerProperty.cs" />
-        <option value="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" />
-        <option value="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" />
         <option value="$PROJECT_DIR$/Dto/ContractDto.cs" />
-        <option value="$PROJECT_DIR$/DAL/MyDbContext.cs" />
         <option value="$PROJECT_DIR$/Model/Client.cs" />
         <option value="$PROJECT_DIR$/Model/Property.cs" />
+        <option value="$PROJECT_DIR$/DAL/MyDbContext.cs" />
+        <option value="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" />
+        <option value="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" />
+        <option value="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" />
+        <option value="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" />
+        <option value="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" />
+        <option value="$PROJECT_DIR$/Model/Contract.cs" />
       </list>
     </option>
   </component>
@@ -214,7 +203,8 @@
       <workItem from="1608020417745" duration="593000" />
       <workItem from="1608675478096" duration="1406000" />
       <workItem from="1617898616999" duration="9595000" />
-      <workItem from="1618046345508" duration="5332000" />
+      <workItem from="1618046345508" duration="8873000" />
+      <workItem from="1618074990273" duration="640000" />
     </task>
     <servers />
   </component>
@@ -240,30 +230,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1247" height="199" key="GridCell.Tab.0.bottom" timestamp="1618058918058">
+    <state width="1248" height="199" key="GridCell.Tab.0.bottom" timestamp="1618076052874">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1247" height="199" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1618058918058" />
-    <state width="1247" height="199" key="GridCell.Tab.0.center" timestamp="1618058918058">
+    <state width="1248" height="199" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
+    <state width="1248" height="199" key="GridCell.Tab.0.center" timestamp="1618076052874">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1247" height="199" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1618058918058" />
-    <state width="1247" height="199" key="GridCell.Tab.0.left" timestamp="1618058918058">
+    <state width="1248" height="199" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
+    <state width="1248" height="199" key="GridCell.Tab.0.left" timestamp="1618076052874">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1247" height="199" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1618058918058" />
-    <state width="1247" height="199" key="GridCell.Tab.0.right" timestamp="1618058918058">
+    <state width="1248" height="199" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
+    <state width="1248" height="199" key="GridCell.Tab.0.right" timestamp="1618076052874">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1247" height="199" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1618058918058" />
+    <state width="1248" height="199" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
     <state x="521" y="19" key="RiderGenerateDialog" timestamp="1617915204790">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
     <state x="521" y="19" key="RiderGenerateDialog/0.0.1603.862@0.0.1603.862" timestamp="1617915204790" />
-    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog" timestamp="1617912536307">
+    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog" timestamp="1618061871080">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog/0.0.1603.862@0.0.1603.862" timestamp="1617912536307" />
+    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog/0.0.1603.862@0.0.1603.862" timestamp="1618061871080" />
     <state x="438" y="200" key="run.anything.popup" timestamp="1617912819048">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
