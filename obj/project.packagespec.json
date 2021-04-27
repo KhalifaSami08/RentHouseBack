@@ -31,6 +31,18 @@
           "target": "Package",
           "version": "[8.0.1, )"
         },
+        "GraphQL.Server.Ui.Voyager": {
+          "target": "Package",
+          "version": "[5.0.2, )"
+        },
+        "HotChocolate.AspNetCore": {
+          "target": "Package",
+          "version": "[11.1.0, )"
+        },
+        "HotChocolate.Data.EntityFramework": {
+          "target": "Package",
+          "version": "[11.1.0, )"
+        },
         "Interop.Word": {
           "target": "Package",
           "version": "[1.0.0, )"
@@ -45,17 +57,17 @@
         },
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[3.1.8, )"
+          "version": "[5.0.4, )"
         },
         "Microsoft.EntityFrameworkCore.Design": {
           "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
           "suppressParent": "All",
           "target": "Package",
-          "version": "[3.1.8, )"
+          "version": "[5.0.4, )"
         },
         "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
-          "version": "[3.1.8, )"
+          "version": "[5.0.4, )"
         }
       },
       "imports": [

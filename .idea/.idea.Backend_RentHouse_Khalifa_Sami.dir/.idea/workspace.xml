@@ -23,18 +23,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f30934-007b-4fe5-8d99-7caf832e51d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_EarlyTermination.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_EntryState.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_ExitInventory.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_Guarantor.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_Lease.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentsWord/Kruger_PasContent_LeaseCancellation.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphQL/Clients/ClientType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphQL/Mutations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphQL/Properties/PropertyType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphQL/Subscriptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GraphQL.Server.Ui.Voyager.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GreenDonut.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.AspNetCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Data.EntityFramework.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Data.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Execution.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Fetching.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Language.SyntaxTree.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Language.Utf8.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Language.Visitors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Language.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Subscriptions.InMemory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Subscriptions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Types.CursorPagination.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Types.OffsetPagination.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Types.Scalars.Upload.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Types.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Utilities.Introspection.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Utilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.Validation.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/HotChocolate.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Humanizer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DiagnosticAdapter.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.ObjectPool.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend_RentHouse_Khalifa_Sami.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend_RentHouse_Khalifa_Sami.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Backend_RentHouse_Khalifa_Sami.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ControllerContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ControllerContract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/MyDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/MyDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphQL/Queries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Queries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Property.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Property.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend_RentHouse_Khalifa_Sami.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend_RentHouse_Khalifa_Sami.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Backend_RentHouse_Khalifa_Sami.csproj" />
         <option value="$PROJECT_DIR$/Data/ContractData/IContractRepo.cs" />
         <option value="$PROJECT_DIR$/Data/ContractData/SqlContractRepo.cs" />
         <option value="$PROJECT_DIR$/Model/Property/Property.cs" />
@@ -85,21 +183,26 @@
         <option value="$PROJECT_DIR$/Migrations/20201024163154_initial Migration.Designer.cs" />
         <option value="$PROJECT_DIR$/Migrations/20201110203435_GeoLocalisation OK.Designer.cs" />
         <option value="$PROJECT_DIR$/Dto/Profiles.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/GraphQL/Queries.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerClient.cs" />
-        <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
         <option value="$PROJECT_DIR$/Controllers/ControllerProperty.cs" />
         <option value="$PROJECT_DIR$/Dto/ContractDto.cs" />
-        <option value="$PROJECT_DIR$/Model/Client.cs" />
-        <option value="$PROJECT_DIR$/Model/Property.cs" />
         <option value="$PROJECT_DIR$/DAL/MyDbContext.cs" />
         <option value="$PROJECT_DIR$/DAL/PropertyData/SqlPropertyRepo.cs" />
         <option value="$PROJECT_DIR$/DAL/ClientData/IClientRepo.cs" />
-        <option value="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ControllerContract.cs" />
+        <option value="$PROJECT_DIR$/Backend_RentHouse_Khalifa_Sami.csproj" />
+        <option value="$PROJECT_DIR$/Model/Contract.cs" />
+        <option value="$PROJECT_DIR$/GraphQL/Mutations.cs" />
+        <option value="$PROJECT_DIR$/GraphQL/Subscriptions.cs" />
         <option value="$PROJECT_DIR$/DAL/ContractData/IContractRepo.cs" />
         <option value="$PROJECT_DIR$/DAL/ContractData/SqlContractRepo.cs" />
-        <option value="$PROJECT_DIR$/Model/Contract.cs" />
+        <option value="$PROJECT_DIR$/GraphQL/Properties/PropertyType.cs" />
+        <option value="$PROJECT_DIR$/Model/Property.cs" />
+        <option value="$PROJECT_DIR$/GraphQL/Queries.cs" />
+        <option value="$PROJECT_DIR$/GraphQL/Clients/ClientType.cs" />
+        <option value="$PROJECT_DIR$/Model/Client.cs" />
+        <option value="$PROJECT_DIR$/DAL/ClientData/SqlClientRepo.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
       </list>
     </option>
   </component>
@@ -205,6 +308,15 @@
       <workItem from="1617898616999" duration="9595000" />
       <workItem from="1618046345508" duration="8873000" />
       <workItem from="1618074990273" duration="640000" />
+      <workItem from="1618076087796" duration="615000" />
+      <workItem from="1618079888488" duration="866000" />
+      <workItem from="1618569508377" duration="1093000" />
+      <workItem from="1618864280915" duration="1003000" />
+      <workItem from="1618933326258" duration="4611000" />
+      <workItem from="1618955468811" duration="164000" />
+      <workItem from="1619008001574" duration="9630000" />
+      <workItem from="1619026261692" duration="998000" />
+      <workItem from="1619546103013" duration="2544000" />
     </task>
     <servers />
   </component>
@@ -230,30 +342,38 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1248" height="199" key="GridCell.Tab.0.bottom" timestamp="1618076052874">
+    <state x="217" y="271" width="1057" height="562" key="DiffContextDialog" timestamp="1618948330534">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1248" height="199" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
-    <state width="1248" height="199" key="GridCell.Tab.0.center" timestamp="1618076052874">
+    <state x="217" y="271" width="1057" height="562" key="DiffContextDialog/0.0.1603.862@0.0.1603.862" timestamp="1618948330534" />
+    <state width="917" height="224" key="GridCell.Tab.0.bottom" timestamp="1619548667715">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1248" height="199" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
-    <state width="1248" height="199" key="GridCell.Tab.0.left" timestamp="1618076052874">
+    <state width="917" height="224" key="GridCell.Tab.0.bottom/0.0.1603.862@0.0.1603.862" timestamp="1619548667715" />
+    <state width="917" height="224" key="GridCell.Tab.0.center" timestamp="1619548667715">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1248" height="199" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
-    <state width="1248" height="199" key="GridCell.Tab.0.right" timestamp="1618076052874">
+    <state width="917" height="224" key="GridCell.Tab.0.center/0.0.1603.862@0.0.1603.862" timestamp="1619548667715" />
+    <state width="917" height="224" key="GridCell.Tab.0.left" timestamp="1619548667715">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state width="1248" height="199" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1618076052874" />
+    <state width="917" height="224" key="GridCell.Tab.0.left/0.0.1603.862@0.0.1603.862" timestamp="1619548667715" />
+    <state width="917" height="224" key="GridCell.Tab.0.right" timestamp="1619548667715">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state width="917" height="224" key="GridCell.Tab.0.right/0.0.1603.862@0.0.1603.862" timestamp="1619548667715" />
     <state x="521" y="19" key="RiderGenerateDialog" timestamp="1617915204790">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
     <state x="521" y="19" key="RiderGenerateDialog/0.0.1603.862@0.0.1603.862" timestamp="1617915204790" />
-    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog" timestamp="1618061871080">
+    <state x="503" y="113" key="RollbackChangesDialog" timestamp="1619008656936">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
-    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog/0.0.1603.862@0.0.1603.862" timestamp="1618061871080" />
+    <state x="503" y="113" key="RollbackChangesDialog/0.0.1603.862@0.0.1603.862" timestamp="1619008656936" />
+    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog" timestamp="1619027268180">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="230" y="138" width="1106" height="592" key="VCS.FileHistoryDialog/0.0.1603.862@0.0.1603.862" timestamp="1619027268180" />
     <state x="438" y="200" key="run.anything.popup" timestamp="1617912819048">
       <screen x="0" y="0" width="1603" height="862" />
     </state>

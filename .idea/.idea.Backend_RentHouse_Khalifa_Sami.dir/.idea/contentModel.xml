@@ -32,6 +32,12 @@
         </e>
       </e>
       <e p="DocumentsWord" t="Include">
+        <e p="Kruger_PasContent_EarlyTermination.docx" t="Include" />
+        <e p="Kruger_PasContent_EntryState.docx" t="Include" />
+        <e p="Kruger_PasContent_ExitInventory.docx" t="Include" />
+        <e p="Kruger_PasContent_Guarantor.docx" t="Include" />
+        <e p="Kruger_PasContent_Lease.docx" t="Include" />
+        <e p="Kruger_PasContent_LeaseCancellation.docx" t="Include" />
         <e p="Templates" t="Include">
           <e p="TEMPLATE_EarlyTermination.docx" t="Include" />
           <e p="TEMPLATE_EntryState.docx" t="Include" />
@@ -47,7 +53,15 @@
         <e p="Profiles.cs" t="Include" />
       </e>
       <e p="GraphQL" t="Include">
+        <e p="Clients" t="Include">
+          <e p="ClientType.cs" t="Include" />
+        </e>
+        <e p="Mutations.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="PropertyType.cs" t="Include" />
+        </e>
         <e p="Queries.cs" t="Include" />
+        <e p="Subscriptions.cs" t="Include" />
       </e>
       <e p="Migrations" t="Include">
         <e p="20201024163154_initial Migration.cs" t="Include" />

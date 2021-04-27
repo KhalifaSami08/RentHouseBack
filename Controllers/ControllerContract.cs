@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Backend_RentHouse_Khalifa_Sami.DAL.ClientData;
 using Backend_RentHouse_Khalifa_Sami.DAL.ContractData;
@@ -11,7 +9,6 @@ using Backend_RentHouse_Khalifa_Sami.Model;
 using Backend_RentHouse_Khalifa_Sami.Model.Documents;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace Backend_RentHouse_Khalifa_Sami.Controllers
 {

@@ -1,6 +1,5 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend_RentHouse_Khalifa_Sami.Model
 {
@@ -9,13 +8,6 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
     {
         [Key]
         public int IdClient { get; set; }
-        
-        /*
-         [ForeignKey("IdContract")]
-          public int IdContract { get; set; }
-          public Contract Contract { get; set; }
-        */
-        
         [Required]
         public string Civility { get; set; }
         public string Gender { get; set; } //Par défaut en fonction de civility
@@ -36,13 +28,13 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
         public string Email { get; set; }
         [Required]
         public string PhoneNumber { get; set; }//string pour pas echaper le '0' si index local ainsi que pour l'indicatif
-        
-
         [Required]
         public bool IsClient { get; set; } //Client ou Guarantor
         
-        //Uniquement pour le client
-
+        /*
+        * Uniquement pour le client
+        */ 
+        
         public DateTime DateOfBirth { get; set; }
         public int Age { get; set; } //par défaut en fonction de la DDN
         public string PlaceOfBirth { get; set; }
@@ -50,6 +42,5 @@ namespace Backend_RentHouse_Khalifa_Sami.Model
 
         //Un client ne peux avoir qu'une seule location
         public bool HaveAlreadyRentedHouse { get; set; }
-
     }
 }
